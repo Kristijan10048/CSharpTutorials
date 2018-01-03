@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Data/2">
+  <Datas>
+    <Data name="Mdesc_1" size="1" access="private" xsi:type="array" type="mdesc">
+      <Value key="0" accel="90" vel="100" decel="90" tmax="" rmax="" />
+    </Data>
+    <Data name="Mdesc_2" size="1" access="private" xsi:type="array" type="mdesc">
+      <Value key="0" accel="90" vel="100" decel="90" tmax="" rmax="" />
+    </Data>
+    <Data name="Mdesc_1" size="1" access="private" xsi:type="array" type="mdesc">
+      <Value key="0" accel="90" vel="100" decel="90" tmax="" rmax="" />
+    </Data>
+    <Data name="Mdesc_via2" size="1" access="private" xsi:type="array" type="mdesc">
+      <Value key="0" accel="" vel="100" decel="" tmax="" rmax="" />
+    </Data>
+    <Data name="Mdesc_via3" size="1" access="private" xsi:type="array" type="mdesc">
+      <Value key="0" accel="" vel="100" decel="" tmax="" rmax="" />
+    </Data>
+    <Data access="private" name="tTool" size="1" type="tool" xsi:type="array">
+      <Value index="0" fatherId="flange[0]" key="0" rx="92.76" ry="89.69" rz="-92.45" x="152.77" y="-1.36" z="154.46" />
+    </Data>
+    <Data access="private" name="w" size="1" type="frame" xsi:type="array">
+      <Value fatherId="w[0]" key="0" rx="0" ry="0" rz="0" x="0" y="0" z="0" />
+    </Data>
+    <Data access="private" name="1" size="1" type="jointRs" xsi:type="array">
+      <Value key="0" j1="4.385" j2="69.804" j3="-53.283" j4="-153.747" j5="104.912" j6="12.437" />
+    </Data>
+    <Data access="private" name="2" size="1" type="jointRs" xsi:type="array">
+      <Value key="0" j1="-10.179" j2="68.77" j3="-48.228" j4="-138.265" j5="105.638" j6="18.718" />
+    </Data>
+    <Data access="private" name="1" size="1" type="jointRs" xsi:type="array">
+      <Value key="0" j1="4.385" j2="69.804" j3="-53.283" j4="-153.747" j5="104.912" j6="12.437" />
+    </Data>
+    <Data access="private" name="via2" size="1" type="jointRs" xsi:type="array">
+      <Value key="0" j1="19.216" j2="69.804" j3="-53.283" j4="-153.747" j5="104.912" j6="12.437" />
+    </Data>
+    <Data access="private" name="via3" size="1" type="jointRs" xsi:type="array">
+      <Value key="0" j1="23.22" j2="69.804" j3="-53.283" j4="-153.747" j5="104.912" j6="12.437" />
+    </Data>
+  </Datas>
+</Database>
