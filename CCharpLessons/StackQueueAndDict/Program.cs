@@ -30,11 +30,11 @@ namespace StackQueueAndDict
             int tmpVal = myQueue.Dequeue();
 
             Console.WriteLine("Dequeue {0}", tmpVal);
-           
+
         }
 
         /// <summary>
-        /// Ilustrate stack
+        /// Illustrate stack
         /// </summary>
         private static void StackExample()
         {
@@ -67,7 +67,7 @@ namespace StackQueueAndDict
             string[] names = {"Test",
                              "Testovski",
                               "Michale",
-                             "Konan"};
+                              "Konan"};
 
             // add names in to the hash table. 
             //  -Key: hash code
@@ -75,10 +75,8 @@ namespace StackQueueAndDict
             for (int i = 0; i < names.Length; i++)
                 myDic.Add(names[i].GetHashCode(), names[i]);
 
-
             foreach (string n in names)
                 Console.WriteLine(n);
-
         }
         #endregion
 
