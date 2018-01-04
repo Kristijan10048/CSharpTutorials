@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace NamedParameters
@@ -44,7 +43,7 @@ namespace NamedParameters
     {
         static void Main(string[] args)
         {
-
+            //pass parameters by name
             Person p = new Person(sFirstName: "John",
                                   sLastName: "Doe",
                                   sAddress: "Unknown");
