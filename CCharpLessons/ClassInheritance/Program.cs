@@ -4,28 +4,66 @@ using System.Text;
 
 namespace ClassInheritance
 {
+    /// <summary>
+    /// Base class
+    /// </summary>
     class C4WelParam
     {
-        private double weldNumb;
-       
+        private int m_ProgramNumber;
+
+        /// <summary>
+        /// Virtual method used to reset all parameters of derived classes
+        /// </summary>
         public virtual void Reset()
         {
-            weldNumb = 0;
+            m_ProgramNumber = 0;
         }
+
+        #region Public Properties
+        /// <summary>
+        /// Program number
+        /// </summary>
+        public int ProgramNumber
+        {
+            get { return m_ProgramNumber; }
+            set { m_ProgramNumber = value; }
+        }
+        #endregion
     }
 
     class C5WelParam : C4WelParam
     {
-        double relDist;
-        double teachDist;
+        #region Private Members
+        private  double m_relDist;
+        private  double m_teachDist;
+        #endregion
 
-        public override void  Reset()
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public C5WelParam()
         {
- 	        base.Reset();
-            relDist = 0;
-            teachDist = 0;
+            m_relDist = 0;
+            m_teachDist = 0;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public override void Reset()
+        {
+            base.Reset();
+            m_relDist = 0;
+            m_teachDist = 0;
+        }
+
+        /// <summary>
+        /// A method that uses internal parameters to do some calculations
+        /// </summary>
+        public void DoSomeMath()
+        {
+            double tmpVal = m_relDist + m_teachDist;
+        }
     }
 
 
@@ -35,7 +73,7 @@ namespace ClassInheritance
 
         public C4WelParam WeldParam
         {
-           get {return m_c4weldParam as C4WelParam;}
+            get { return m_c4weldParam as C4WelParam; }
         }
 
         public C4Uploader()
@@ -48,7 +86,7 @@ namespace ClassInheritance
     {
         private C5WelParam m_c5WeldParam;
 
-        public C5Uploader():base()
+        public C5Uploader() : base()
         {
             m_c5WeldParam = new C5WelParam();
         }

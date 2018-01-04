@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ExtensionMethods2;
 
 namespace ExtensionMethods
 {
@@ -17,17 +13,27 @@ namespace ExtensionMethods
     /// <summary>
     /// Application class that extents the generic interface
     /// </summary>
-    public class CAppOlpUtil : IMyObject
+    public class CAppUtil : IMyObject
     {
+        #region Public Methods
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public bool IsVisible()
         {
             return true;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public string GetRobotName()
         {
             return "R1";
         }
+        #endregion
     }
 
     /// <summary>
@@ -41,15 +47,20 @@ namespace ExtensionMethods
         }
     }
 
-    //Extension methods for OlpUtil class
+    //Extension methods for Util class
     public static class CommandWrappers
     {
-        public static string GetRobotNameFromUI(this CAppOlpUtil r)
+        public static string GetRobotNameFromUI(this CAppUtil r)
         {
+            if (r == null)
+            {
+                throw new ArgumentNullException(nameof(r));
+            }
+
             return "R2";
         }
 
-        public static string GetRobotFromId(this CAppOlpUtil r, string id)
+        public static string GetRobotFromId(this CAppUtil r, string id)
         {
             return "Param : " + id;
         }
@@ -70,23 +81,22 @@ namespace ExtensionMethods
     {
         static void Main(string[] args)
         {
-            CAppOlpUtil util = new CAppOlpUtil();
+            CAppUtil util = new CAppUtil();
 
             //extension method
             "id".IsCapitalized();
 
-            //exstension method
+            //extension method
             util.IsVisible();
 
-            util.InterfaceExtensionMethod("" , 10);
+            //util.InterfaceExtensionMethod("" , 10);
 
             //interface extension
             util.CanShow("s");
-             
-
 
             Console.WriteLine(util.GetRobotNameFromUI());
             Console.WriteLine(util.GetRobotFromId("test"));
+
             Console.ReadKey();
         }
     }

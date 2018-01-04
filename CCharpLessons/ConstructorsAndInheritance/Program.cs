@@ -15,7 +15,7 @@ namespace ConstructorsAndInheritance
 
     public class B
     {
-        int x = 1; // Executes 3rd
+        //int x = 1; // Executes 3rd
         public B(int x)
         {
             // Executes 4th
@@ -23,7 +23,7 @@ namespace ConstructorsAndInheritance
     }
     public class D : B
     {
-        int y = 1; // Executes 1st
+        //int y = 1; // Executes 1st
         public D(int x)
             : base(x + 1) // Executes 2nd
         {

@@ -21,7 +21,7 @@ namespace Lession3._Operator_QusttionMarkOperator
 
         // 1 = true
         // 2 = false
-        int BoolToInt;
+        //int BoolToInt;
 
         static void Main(string[] args)
         {

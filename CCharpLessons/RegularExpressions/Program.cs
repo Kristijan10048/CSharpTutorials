@@ -1,7 +1,5 @@
 using System;
 using System.Text.RegularExpressions;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RegularExpressions
 {
@@ -202,7 +200,7 @@ namespace RegularExpressions
             string tag = "Body";
 
             //Tag format       
-            string tmpFMT = "@{0}{1}{2}";
+            //string tmpFMT = "@{0}{1}{2}";
             string C_STR_TAG_REGEX_FMT = string.Concat(start, @"{0}\b.*", stop);
 
             string pattern = string.Format(C_STR_TAG_REGEX_FMT, tag);
@@ -218,7 +216,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        public static  void MatchForLoopStaubli()
+        public static  void MatchForLoop()
         {
             Regex C_REGEX_FOR_STEP = new Regex(@"^\s*for\s+(.+)\s*\=\s*(-?\d+)\s+to\s+(-?\d+)\s+step\s+(-?\d+)\b");
             string text = "for i = 90 to -90 step -10";
@@ -236,7 +234,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        public static  void MatchIoSetStaubli()
+        public static  void MatchIoSet()
         {
             Regex C_REGEX_IOSET_SIGNAL_VALUE_CALL = new Regex(@"^(a|s|g)ioSet\s*\(\s*(\w+)\s*\,\s*(\w+)\s*\)\s*", RegexOptions.IgnoreCase);
             string text = "aioSet(test, 12)";
@@ -253,7 +251,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        public static void MatchFanucPaintTeachDist()
+        public static void MatchPaintTeachDist()
         {
             string text = @"Field: $LNSCH[1].$TEACH_DIST Access: RW: INTEGER = -616134";
 
@@ -279,7 +277,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        public static void MatchFanucPaintTrackFrame()
+        public static void MatcPaintTrackFrame()
         {
 
             string text = @"Field: $LNSCH[1].$TRK_FRAME Access: RW: POSITION = ";
@@ -303,7 +301,7 @@ namespace RegularExpressions
                 Console.WriteLine("No Match");
         }
 
-        //void MatchFanucPaintTrackFrame()
+        //void MatchPaintTrackFrame()
         //{
         //    string text = @"Field: $LNSCH[1].$TRK_FRAME Access: RW: POSITION = ";
         //    Regex C_REGEX_TRACK_FRAME_START_BLOCK = new Regex(@"^Field\s*\:\s*\$LNSCH\[(\d+)\]\.\$TRK_FRAME\s*Access\s*\:\s*RW\s*\:\s*POSITION\s*=\s*");//\=\s*\b
@@ -324,7 +322,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        public static void MatchFanucPaintTrackUserFrame()
+        public static void MatchPaintTrackUserFrame()
         {
 
             string text = @"Field: $LNSCH[1].$TRK_UFRAME Access: RW: POSITION = ";
@@ -348,7 +346,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        public static void MatchFanucPaintFrameData()
+        public static void MatchPaintFrameData()
         {
 
             string text = @"Group: 1   Config: F U T, 1, 2,3
@@ -417,7 +415,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        public static void MatchFanucPaintBounds()
+        public static void MatchPaintBounds()
         {
             string text = @"Field: $LNSCH[1].$BOUND1  ARRAY[10] OF REAL
                                 [1] = 0.000000e+00
@@ -486,7 +484,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        public static void MatchFanucPaintTrackUserFrameFlag()
+        public static void MatchTrackUserFrameFlag()
         {
 
             string text = @"Field: $LNSCH[2].$USE_TRK_UFM Access: RW: BOOLEAN = FALSE";
@@ -518,17 +516,17 @@ namespace RegularExpressions
             //MatchInMotionSignal();
             //MatchXmlBodyTag();
             //MatchSlaveMotionsCompleatedSignal();
-            //MatchForLoopStaubli();
-            //MatchIoSetStaubli();
-            //MatchFanucPaintTeachDist();
+            //MatchForLoop();
+            //MatchIoSet();
+            //MatchPaintTeachDist();
 
-            //MatchFanucPaintTrackFrame();
-            //MatchFanucPaintTrackUserFrame();
-            //MatchFanucPaintBounds();
+            //MatchPaintTrackFrame();
+            //MatchPaintTrackUserFrame();
+            //MatchPaintBounds();
 
-            //MatchFanucPaintFrameData();
+            //MatchPaintFrameData();
 
-            MatchFanucPaintTrackUserFrameFlag();
+            MatchPaintTrackUserFrame();
 
             Console.ReadKey();
         }
