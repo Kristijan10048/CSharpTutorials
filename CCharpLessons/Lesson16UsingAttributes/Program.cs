@@ -30,7 +30,7 @@ namespace Lesson16UsingAttributes
     //An attribute that helps ensure assemblies adhere to the Common Language Specification (CLS) 
     //is the CLSCompliantAttribute attribute. The CLS is the set of standards that enable different 
     //.NET languages to communicate.
-    [assembly:CLSCompliant(true)]
+    //[assembly:CLSCompliant(true)]
     class AttributeTargetDemo
     {
         public void NonClsCompliantMethod(uint nclsParam)
@@ -41,7 +41,9 @@ namespace Lesson16UsingAttributes
     class Program
     {
         [DllImport("User32.dll", EntryPoint = "MessageBox")]
-        static extern int MessageDialog(int hWnd, string msg, string caption, int msgType);  
+        static extern int MessageDialog(int hWnd, string msg, string caption, int msgType); 
+        
+
          // make the program thread safe for COM
         [STAThread]
         static void Main(string[] args)
