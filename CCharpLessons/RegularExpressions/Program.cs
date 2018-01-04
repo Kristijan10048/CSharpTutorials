@@ -12,13 +12,12 @@ namespace RegularExpressions
     //? 0 or 1
     //[] - range
     //S* zero or more spaces
-
     class Program
     {
         /// <summary>
         /// 
         /// </summary>
-        void MatchWordsOnly()
+        public static void MatchWordsOnly()
         {
             string txt = "ova e eden test. Uste edna recenica";
 
@@ -36,7 +35,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        void MatchDigitsOnly()
+        public static void MatchDigitsOnly()
         {
             string txt = "ova e eden test.125 Uste12 edna 123recenica 1324";
 
@@ -54,7 +53,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        void MatchTeachDistExp()
+        public static void MatchTeachDistExp()
         {
             string txt = "ML Spot, Target, Speed, Tool, Frame, ToolMap, Spotdata, /Zone, /Load, /Orientation,/TeachDist( 20.01 ) /TeachDist(10.01), /RelDist(1.001), /Re_Open(xx)";
 
@@ -83,8 +82,10 @@ namespace RegularExpressions
                 
         }
 
-        //()Captures the matched subexpression and assigns it a zero-based ordinal number.
-        void ParseNumber()
+        /// <summary>
+        /// Captures the matched subexpression and assigns it a zero-based ordinal number.
+        /// </summary>
+        public static void ParseNumber()
         {
             string test = "f(10)";
             string pattern = @"f\((\d+)\)";
@@ -102,7 +103,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        void parseComma()
+        public static void ParseComma()
         {
             //MC SPOT,
             string text = "wp8, wp9, VJ25, Tool1, F0, Toolmap1, Spot1, /Z=Z75, /L=L0, /O=Euler, /R=TeachDist(10), /R=RelDist(10), /R=Re_Open(10)";
@@ -136,7 +137,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        void MatchSignalNextMotionStep()
+        public static void MatchSignalNextMotionStep()
         {
             string text = "r2_104NextMotionStep";
             string pattern = @"\b\w+NextMotionStep\b";
@@ -152,7 +153,7 @@ namespace RegularExpressions
         /// 
         /// </summary>
         /// <returns></returns>
-        private bool MatchInMotionSignal()
+        public static bool MatchInMotionSignal()
         {
             string text = "r2_10411testInMotion12test";
             string inMotionPattern = @"\b\w+InMotion\b";
@@ -172,7 +173,7 @@ namespace RegularExpressions
         /// 
         /// </summary>
         /// <returns></returns>
-        private bool MatchSlaveMotionsCompleatedSignal()
+        public static bool MatchSlaveMotionsCompleatedSignal()
         {
             string text = "r1_104rwasrSlave`MotionsCompleted";
             string slaveMotionsCompleatedPattern = @"\b\w+SlaveMotionsCompleted\b";
@@ -192,7 +193,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        void MatchXmlBodyTag()
+        public static void MatchXmlBodyTag()
         {
             string txt = "<source> <code>begin ~Body~ end </code> </source>";
 
@@ -217,29 +218,29 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        void MatchForLoopStaubli()
+        public static  void MatchForLoopStaubli()
         {
             Regex C_REGEX_FOR_STEP = new Regex(@"^\s*for\s+(.+)\s*\=\s*(-?\d+)\s+to\s+(-?\d+)\s+step\s+(-?\d+)\b");
-         string text = "for i = 90 to -90 step -10";
-       
-        
-         Match m = C_REGEX_FOR_STEP.Match(text);
-         if (m != null && m.Success)
-         {
-             Console.WriteLine("Match:{0}", m.ToString());            
-         }
+            string text = "for i = 90 to -90 step -10";
 
-         Console.WriteLine("No Match");       
+
+            Match m = C_REGEX_FOR_STEP.Match(text);
+            if (m != null && m.Success)
+            {
+                Console.WriteLine("Match:{0}", m.ToString());
+            }
+
+            Console.WriteLine("No Match");
         }
 
         /// <summary>
         /// 
         /// </summary>
-        void MatchIoSetStaubli()
+        public static  void MatchIoSetStaubli()
         {
             Regex C_REGEX_IOSET_SIGNAL_VALUE_CALL = new Regex(@"^(a|s|g)ioSet\s*\(\s*(\w+)\s*\,\s*(\w+)\s*\)\s*", RegexOptions.IgnoreCase);
             string text = "aioSet(test, 12)";
-            
+
             Match m = C_REGEX_IOSET_SIGNAL_VALUE_CALL.Match(text);
             if (m != null && m.Success)
             {
@@ -252,9 +253,8 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        void MatchFanucPaintTeachDist()
+        public static void MatchFanucPaintTeachDist()
         {
-
             string text = @"Field: $LNSCH[1].$TEACH_DIST Access: RW: INTEGER = -616134";
 
             Regex C_REGEX_TEACH_DIST_START_BLOCK = new Regex(@"^Field\:\s*\$LNSCH\[(\d+)\]\.\$TEACH_DIST\s*Access:\s*RW\:\s*INTEGER\s*=\s*([+-]?\d+)\b");
@@ -279,7 +279,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        void MatchFanucPaintTrackFrame()
+        public static void MatchFanucPaintTrackFrame()
         {
 
             string text = @"Field: $LNSCH[1].$TRK_FRAME Access: RW: POSITION = ";
@@ -305,21 +305,15 @@ namespace RegularExpressions
 
         //void MatchFanucPaintTrackFrame()
         //{
-
         //    string text = @"Field: $LNSCH[1].$TRK_FRAME Access: RW: POSITION = ";
-
         //    Regex C_REGEX_TRACK_FRAME_START_BLOCK = new Regex(@"^Field\s*\:\s*\$LNSCH\[(\d+)\]\.\$TRK_FRAME\s*Access\s*\:\s*RW\s*\:\s*POSITION\s*=\s*");//\=\s*\b
-
         //    Match m = C_REGEX_TRACK_FRAME_START_BLOCK.Match(text);
         //    if (m != null && m.Success)
         //    {
         //        int pntSch = -12;
         //        int value = -12;
-
         //        Int32.TryParse(m.Groups[1].Value, out pntSch);
-
         //        Int32.TryParse(m.Groups[2].Value.ToString(), out value);
-
         //        Console.WriteLine("Paint schedule: {0}", pntSch);
         //        Console.WriteLine("Match:{0}", m.ToString());
         //    }
@@ -327,7 +321,10 @@ namespace RegularExpressions
         //        Console.WriteLine("No Match");
         //}
 
-        void MatchFanucPaintTrackUserFrame()
+        /// <summary>
+        /// 
+        /// </summary>
+        public static void MatchFanucPaintTrackUserFrame()
         {
 
             string text = @"Field: $LNSCH[1].$TRK_UFRAME Access: RW: POSITION = ";
@@ -351,7 +348,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        void MatchFanucPaintFrameData()
+        public static void MatchFanucPaintFrameData()
         {
 
             string text = @"Group: 1   Config: F U T, 1, 2,3
@@ -420,7 +417,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        void MatchFanucPaintBounds()
+        public static void MatchFanucPaintBounds()
         {
             string text = @"Field: $LNSCH[1].$BOUND1  ARRAY[10] OF REAL
                                 [1] = 0.000000e+00
@@ -489,7 +486,7 @@ namespace RegularExpressions
         /// <summary>
         /// 
         /// </summary>
-        void MatchFanucPaintTrackUserFrameFlag()
+        public static void MatchFanucPaintTrackUserFrameFlag()
         {
 
             string text = @"Field: $LNSCH[2].$USE_TRK_UFM Access: RW: BOOLEAN = FALSE";
@@ -512,27 +509,26 @@ namespace RegularExpressions
 
         static void Main(string[] args)
         {
-            //match numbers
-            Program p = new Program();
 
-            //p.MatchDigitsOnly();
-            //p.MatchTeachDistExp();
-            //p.ParseNumber();
-            //p.parseComma();
-            //p.MatchSignalNextMotionStep();
-            //p.MatchInMotionSignal();
-            //p.MatchXmlBodyTag();
-            //p.MatchSlaveMotionsCompleatedSignal();
-            //p.MatchForLoopStaubli();
-            //p.MatchIoSetStaubli();
-            //p.MatchFanucPaintTeachDist();
+            MatchDigitsOnly();
+            //MatchTeachDistExp();
+            //ParseNumber();
+            //parseComma();
+            //MatchSignalNextMotionStep();
+            //MatchInMotionSignal();
+            //MatchXmlBodyTag();
+            //MatchSlaveMotionsCompleatedSignal();
+            //MatchForLoopStaubli();
+            //MatchIoSetStaubli();
+            //MatchFanucPaintTeachDist();
 
-            //p.MatchFanucPaintTrackFrame();
-            //p.MatchFanucPaintTrackUserFrame();
-            //p.MatchFanucPaintBounds();
+            //MatchFanucPaintTrackFrame();
+            //MatchFanucPaintTrackUserFrame();
+            //MatchFanucPaintBounds();
 
-            //p.MatchFanucPaintFrameData();
-            p.MatchFanucPaintTrackUserFrameFlag();
+            //MatchFanucPaintFrameData();
+
+            MatchFanucPaintTrackUserFrameFlag();
 
             Console.ReadKey();
         }
