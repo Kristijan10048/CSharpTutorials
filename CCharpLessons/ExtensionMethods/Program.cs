@@ -67,7 +67,7 @@ namespace ExtensionMethods
     }    
 
     //Extension methods for string
-    //Note: extension class must be placed in same namespace
+    //Note: extension class must be placed in same name-space
     public static class StringHelper
     {
         public static bool IsCapitalized(this string s)
@@ -77,6 +77,9 @@ namespace ExtensionMethods
         }
     }
 
+    /// <summary>
+    /// Main program class
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
