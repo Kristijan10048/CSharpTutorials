@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Reflection;
 using System.Collections.Generic;
-using System.IO;
-using System.Xml;
 using System.Xml.Linq;
 using System.Linq;
-using System.Text;
 
 namespace LinqXml
 {
     /// <summary>
-    /// 
+    /// //TODO
     /// </summary>
     public class Entities
     {
-
+        //TODO
     }
 
     /// <summary>
@@ -23,23 +19,21 @@ namespace LinqXml
     public class LinqNumbers
     {
         /// <summary>
-        /// 
+        /// Simple axampe of how to use linq
         /// </summary>
         public void ParseNumbers()
         {
             int[] numbers = { 2, 4, 6, 8, 21, 9, 2, 0 };
 
-            var result = from n in numbers
-                         where n < 5
-                         select n;
+            //usage of Linq. Get numbers within given range
+            var result = from n in numbers where n < 5 select n;
 
             //print it
             foreach (int number in result)
                 Console.WriteLine(number);
 
-            var result2 =
-                numbers.Where(n => n < 5)
-                .Select(n => n);
+            //Use lambda expression to do same operation
+            var result2 = numbers.Where(n => n < 5).Select(n => n);
 
             Console.WriteLine("--------------");
 
@@ -89,8 +83,6 @@ namespace LinqXml
             //{
             //    xdoc = XDocument.Load(;
             //}
-
-
         }
 
         /// <summary>
@@ -107,9 +99,7 @@ namespace LinqXml
 
             return query.ToList<string>();
         }
-
     }
-
 
     /// <summary>
     /// 
@@ -164,7 +154,7 @@ namespace LinqXml
                             where (string)nm.Element("Value") == "jointRs"
                             select nm;
 
-           // Console.WriteLine("Details of Female Employees:");
+            // Console.WriteLine("Details of Female Employees:");
 
             foreach (XElement xEle in jointData)
             {
@@ -177,8 +167,7 @@ namespace LinqXml
         #endregion
     }
 
-
-    public static class Class1
+    public static class CAppXmlWithLinq
     {
         public static void Main()
         {
