@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2010
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson1GettingStarted", "Lesson1GettingStarted\Lesson1GettingStarted.csproj", "{9B828EAE-5A00-4AEC-ACB1-3AD16A86F1B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson2OperatorsTypesAndVariables", "Lesson2OperatorsTypesAndVariables\Lesson2OperatorsTypesAndVariables.csproj", "{4CF5C925-CD96-4EB9-A9F3-55246DCAC7CA}"
@@ -54,8 +56,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson19HybridDictionary", "Lesson19HybridDictionary\Lesson19HybridDictionary.csproj", "{C7774AAB-1882-43EC-9D9E-5B90DDB9747A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressionsNCCodeDemos", "RegularExpressionsNCCodeDemos\RegularExpressionsNCCodeDemos.csproj", "{8E3FDEFD-E7FB-4D8B-86E8-2F80A1F61EB8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REgularExpressionBuilderNCCode", "ConsoleApplication1\REgularExpressionBuilderNCCode.csproj", "{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressionsAbbRapidLiBCalibMotion", "RegularExpressionsAbbRapidLiBCalibMotion\RegularExpressionsAbbRapidLiBCalibMotion.csproj", "{CD521AF9-BA52-4B4D-AD6C-187E47DFA323}"
 EndProject
@@ -425,18 +425,6 @@ Global
 		{8E3FDEFD-E7FB-4D8B-86E8-2F80A1F61EB8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8E3FDEFD-E7FB-4D8B-86E8-2F80A1F61EB8}.Release|Win32.ActiveCfg = Release|Any CPU
 		{8E3FDEFD-E7FB-4D8B-86E8-2F80A1F61EB8}.Release|x86.ActiveCfg = Release|Any CPU
-		{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}.Debug|Win32.ActiveCfg = Debug|x86
-		{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}.Debug|x86.ActiveCfg = Debug|x86
-		{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}.Debug|x86.Build.0 = Debug|x86
-		{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}.Release|Any CPU.ActiveCfg = Release|x86
-		{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}.Release|Mixed Platforms.Build.0 = Release|x86
-		{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}.Release|Win32.ActiveCfg = Release|x86
-		{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}.Release|x86.ActiveCfg = Release|x86
-		{E9C15200-4568-45A3-9C5F-1C797FFDA5B3}.Release|x86.Build.0 = Release|x86
 		{CD521AF9-BA52-4B4D-AD6C-187E47DFA323}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{CD521AF9-BA52-4B4D-AD6C-187E47DFA323}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{CD521AF9-BA52-4B4D-AD6C-187E47DFA323}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -632,5 +620,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C2F23E1-9402-4488-8AE1-0560EE0BEF19}
 	EndGlobalSection
 EndGlobal
