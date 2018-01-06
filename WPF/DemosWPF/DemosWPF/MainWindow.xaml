@@ -1,0 +1,51 @@
+﻿<Window x:Class="DemosWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="494" Width="1085">
+    <Grid>
+        <Grid Name="grid1" Margin="0,-2,0,0" Grid.ColumnSpan="3">
+            <!-- TEXTBLOCK -->
+            <TextBlock Height="23" HorizontalAlignment="Right" Margin="0,174,837,0" Name="m_tblFirstName" Text="" VerticalAlignment="Top" Width="120" />
+            <TextBlock Height="62" HorizontalAlignment="Left" Margin="6,299,0,96" Name="textBlock2" FontSize="36" VerticalAlignment="Center" Width="220" >
+                Hello there
+            </TextBlock>
+
+            <!-- LABELS -->
+            <Label Content="First name :" Height="24" HorizontalAlignment="Left" Margin="6,23,0,0" Name="label1" VerticalAlignment="Top" Width="94" FontFamily="First Name:" />
+            <Label Content="Last name :" FontFamily="First Name:" Height="24" HorizontalAlignment="Left" Margin="6,49,0,0" Name="m_lblFirstName" VerticalAlignment="Top" Width="82" />
+            <Label Content="Address :" FontFamily="First Name:" Height="24" HorizontalAlignment="Left" Margin="6,80,0,0"    Name="m_lblLastName" VerticalAlignment="Top" Width="73" />
+            <Label Content="City  :" FontFamily="First Name:" Height="24" HorizontalAlignment="Left" Margin="6,110,0,0" Name="m_lblAdress" VerticalAlignment="Top" Width="73" />
+            <Label Content="Country :" FontFamily="First Name:" Height="24" HorizontalAlignment="Left" Margin="6,140,0,0" Name="label2" VerticalAlignment="Top" Width="73" />
+            <Label Content="Current time"  Height="28" HorizontalAlignment="Left" Margin="6,253,0,0" Name="label3" VerticalAlignment="Top" Width="82" />
+            <Label Content="Label" Height="28" HorizontalAlignment="Left" Margin="6,169,0,0" Name="label4" VerticalAlignment="Top" Width="55" />
+            
+            <ComboBox Height="23" HorizontalAlignment="Left" Margin="106,141,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120" />
+            
+            <!-- TEXTBOX -->
+            <TextBox Text="{Binding LastName}"  Height="23" HorizontalAlignment="Left" Margin="106,51,0,0" Name="m_tbxLastName" VerticalAlignment="Top" Width="120" />
+            <TextBox Text="{Binding FirstName}" Height="23" HorizontalAlignment="Left" Margin="106,24,0,0" Name="m_tbxFistName" VerticalAlignment="Top" Width="120" />
+            <TextBox Text="{Binding Address}" Height="23" HorizontalAlignment="Left" Margin="106,80,0,0" Name="m_tbxAddress" VerticalAlignment="Top" Width="120" />
+            <TextBox Text="{Binding City}" Height="23" HorizontalAlignment="Left" Margin="106,112,0,0" Name="m_tbxCity" VerticalAlignment="Top" Width="120" />
+            <TextBox Text="{Binding CurrentTime, Mode=OneWay}" Height="23" HorizontalAlignment="Left" Margin="106,257,0,0" Name="m_tbxCurrTime" VerticalAlignment="Top" Width="298" />
+            
+            <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,428,6,0" Name="button1" VerticalAlignment="Top" Width="75" />
+            <Button Content="OK" HorizontalAlignment="Right" Margin="0,428,87,6" Name="button2" Width="75" Click="button2_Click" />
+            
+            
+            <DatePicker DisplayDate="{Binding CurrentTime, Mode=OneWay}" Height="25" HorizontalAlignment="Right" Margin="0,205,842,0" Name="datePicker1" VerticalAlignment="Top" Width="115" />
+            <GroupBox Header="m_gbxData" Height="394" HorizontalAlignment="Left" Margin="410,23,0,0" Name="groupBox1" VerticalAlignment="Top" Width="653">
+                <Calendar DisplayDate="{Binding DayTimeSaved}"  Height="144" HorizontalAlignment="Left" Margin="453,0,0,266" Name="calendar1" Width="179" />
+            </GroupBox>
+            <Button FontWeight="Bold" Width="130 " Height="24">
+                <WrapPanel>
+                    <TextBlock Foreground="Blue">Multi</TextBlock>
+                    <TextBlock Foreground="Red">Color</TextBlock>
+                    <TextBlock>Button</TextBlock>
+                </WrapPanel>
+            </Button>
+            <Label Content="Date :" Height="24" HorizontalAlignment="Left" Margin="6,204,0,0" Name="m_lblDate" VerticalAlignment="Top" Width="73" />
+            <ContentControl Height="100" HorizontalAlignment="Left" Margin="433,299,0,0" Name="contentControl1" VerticalAlignment="Top" Width="418" />
+            
+        </Grid>
+    </Grid>
+</Window>
