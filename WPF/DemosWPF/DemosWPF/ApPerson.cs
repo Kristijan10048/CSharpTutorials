@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DemosWPF
 {
-    public class ApPerson : MyApp
+    public class CAppPerson : CAppMyApp
     {
         #region Private Members
         private string m_sFirstName;

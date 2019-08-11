@@ -5,11 +5,11 @@ using System.Text;
 
 namespace DemosWPF
 {
-    public class MyApp
+    public class CAppMyApp
     {
         #region Private Members
         /// <summary>
-        /// NAme
+        /// Name of what???
         /// </summary>
         private string m_sName;
 
@@ -23,17 +23,17 @@ namespace DemosWPF
         /// <summary>
         /// Default constructor
         /// </summary>
-        public MyApp()
+        public CAppMyApp()
         {
             m_currDate = new DateTime();
             m_sName = string.Empty;
         }
 
         /// <summary>
-        /// 
+        /// Constructor
         /// </summary>
         /// <param name="sName"></param>
-        public MyApp(string sName)
+        public CAppMyApp(string sName)
         {
             this.m_sName = sName;
         }
@@ -54,7 +54,7 @@ namespace DemosWPF
         }
 
         /// <summary>
-        /// Saved time
+        /// Date time (read/write)
         /// </summary>
         public DateTime DayTimeSaved
         {

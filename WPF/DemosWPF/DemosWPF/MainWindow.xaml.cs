@@ -27,16 +27,14 @@ namespace DemosWPF
         {
             InitializeComponent();
 
+            CAppPerson tmpPerson = new CAppPerson
+            {
+                FirstName = "Test",
+                LastName = "Testovski",
+                City = "Knowhere",
+                Address = "Somewhere",
+            };
 
-            //MyApp myApp = new MyApp("Testovski1");
-
-            ApPerson tmpPerson = new ApPerson();
-            tmpPerson.FirstName = "Test";
-
-            tmpPerson.LastName = "Testovski";
-
-            tmpPerson.City = "Knowhere";
-            tmpPerson.Address = "Somewhere";
             this.DataContext = tmpPerson;
 
             // bind the Date to the UI

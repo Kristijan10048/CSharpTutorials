@@ -3,137 +3,188 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" mc:Ignorable="d" 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-        Height="1500" Width="1085">
-    <Grid>
-        <Grid Name="MainGrid" Margin="0,-2,0,0" Grid.ColumnSpan="3">
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        FontSize="16"
+        Height="850" Width="1085">
 
-            <!-- Rows and columns definition -->
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="20"/>
-            </Grid.ColumnDefinitions>
+    <Grid Name="MainGrid" Grid.ColumnSpan="4">
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="20"/>
-            </Grid.RowDefinitions>
+        <!-- Rows and columns definition 3x9 matrix -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
 
-            <!-- TEXTBLOCK -->
-            <TextBlock Height="23" HorizontalAlignment="Right" Margin="0,174,837,0" Name="m_tblFirstName" Text="" VerticalAlignment="Top" Width="120" />
-            <TextBlock Height="62" HorizontalAlignment="Left" Margin="6,299,0,96" Name="textBlock2" FontSize="36" VerticalAlignment="Center" Width="220" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <!-- TEXTBLOCK -->
+        <!--<TextBlock Height="23" HorizontalAlignment="Right" Margin="0,174,837,0" Name="m_tblFirstName" Text="" VerticalAlignment="Top" Width="120" />
+        <TextBlock Height="62" HorizontalAlignment="Left" Margin="6,299,0,96" Name="textBlock2" FontSize="36" VerticalAlignment="Center" Width="220" >
                 Hello there
-            </TextBlock>
+        </TextBlock>-->
 
-            <!-- LABELS -->
-            <Label Grid.Column="1" Grid.Row="1" Name="m_lblFirstName" 
-                   Content="First name :" 
-                   Height="24" Width="94"
-                   HorizontalAlignment="Left" 
-                   Margin="20" 
+        <!--(First column)-->
+        <!-- LABELS -->
+        <Label Grid.Column="1" Grid.Row="1" Name="m_lblFirstName" 
+                   Content="First name :"                     
+                   Margin="5"
+                   HorizontalAlignment="Left"
                    VerticalAlignment="Top" />
-            <Label Grid.Column="1" Grid.Row="2" Name="m_lblLastName"
+        <!--Margin (left, top, right, bottom-->
+        <Label Grid.Column="1" Grid.Row="2" Name="m_lblLastName"
                    Content="Last name :" 
-                   Height="24" Width="82" Margin="20" 
+                   Margin="5"
                    HorizontalAlignment="Left"  
                    VerticalAlignment="Top"  />
-            <Label Grid.Column="1" Grid.Row="3" Name="m_lblAddress"
+
+        <Label Grid.Column="1" Grid.Row="3" Name="m_lblAddress"
                    Content="Address :" 
-                   Height="24" Width="73" Margin="20"   
+                   Margin="5"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"  />
-            <Label Grid.Column="1" Grid.Row="4" Name="m_lblCity"
+
+        <Label Grid.Column="1" Grid.Row="4" Name="m_lblCity"
                    Content="City :" 
-                   Height="24" Width="73" Margin="20"
+                   Margin="5"
                    HorizontalAlignment="Left"                     
                    VerticalAlignment="Top"  />
-            <Label Grid.Column="1" Grid.Row="5" Name="m_lblCountry"   
+
+        <Label Grid.Column="1" Grid.Row="5" Name="m_lblCountry"   
                    Content="Country :" 
-                   Height="24"  Width="73" Margin="20"
+                   Margin="5"
                    HorizontalAlignment="Left"                   
                    VerticalAlignment="Top" />
-            <Label Grid.Column="1" Grid.Row="6" Name="m_lblCurrentTime"
+
+        <Label Grid.Column="1" Grid.Row="6" Name="m_lblCurrentTime"
                    Content="Current time :"  
-                   Height="28"  Width="82" Margin="20" 
+                   Margin="5"
                    HorizontalAlignment="Left"                  
                    VerticalAlignment="Top" />
-            <Label Grid.Column="1" Grid.Row="7" Name="label4"
-                   Content="Label" 
-                   Height="28" Width="55" Margin="20"
-                   HorizontalAlignment="Center"
+
+        <Label Grid.Column="1" Grid.Row="7" Name="m_lblDate"
+                   Content="Date :" 
+                   Margin="5"
+                   HorizontalAlignment="Left"                   
                    VerticalAlignment="Top" />
 
+        <Label Grid.Column="1" Grid.Row="8" Name="label4"
+                   Content="Label" 
+                   Margin="5"
+                   HorizontalAlignment="Left"                   
+                   VerticalAlignment="Top" />
 
+        <Label Grid.Column="1" Grid.Row="9" Name="Password"
+                   Content="Password :" 
+                   Margin="5"
+                   HorizontalAlignment="Left"                   
+                   VerticalAlignment="Top" />
 
-            <!-- TEXTBOX -->
-            <TextBox Grid.Column="2" Grid.Row="1" Text="{Binding LastName}" 
-                     Name="m_tbxLastName"
-                     Height="23" Width="250"  Margin="20"
-                     HorizontalAlignment="Left"
-                     VerticalAlignment="Top"  />
-
-            <TextBox Grid.Column="2" Grid.Row="2" Text="{Binding FirstName}" 
+        <!--Second column-->
+        <!-- TEXTBOXES -->
+        <TextBox Grid.Column="2" Grid.Row="1" Text="{Binding FirstName}" 
                      Name="m_tbxFistName" 
-                     Height="23" Width="250"  Margin="20"
+                     Width="250" Margin="5"
                      HorizontalAlignment="Left"  
-                     VerticalAlignment="Top"  />
+                     VerticalAlignment="Center"  />
 
-            <TextBox Grid.Column="2" Grid.Row="3" Text="{Binding Address}" 
-                     Name="m_tbxAddress"
-                     Height="23" Width="250" Margin="20"  
-                     HorizontalAlignment="Left" 
-                     VerticalAlignment="Top" />
-
-            <TextBox Grid.Column="2" Grid.Row="4" Text="{Binding City}" 
-                     Name="m_tbxCity"
-                     Height="23" Width="250" Margin="20"
-                     HorizontalAlignment="Left"      
-                     VerticalAlignment="Top"  />
-
-            <TextBox Grid.Column="2" Grid.Row="5" Text="{Binding CurrentTime, Mode=OneWay}"
-                     Name="m_tbxCurrTime" 
-                     Height="23" Width="250"  Margin="20"
+        <TextBox Grid.Column="2" Grid.Row="2" Text="{Binding LastName}" 
+                     Name="m_tbxLastName"
+                     Width="250" Margin="5"
                      HorizontalAlignment="Left"
-                     VerticalAlignment="Top"  />
+                     VerticalAlignment="Center" />
 
-            <DatePicker Grid.Column="2" Grid.Row="6" DisplayDate="{Binding CurrentTime, Mode=OneWay}" 
-                        Height="25" Width="250" Margin="20" 
-                        HorizontalAlignment="Right" 
-                        Name="datePicker1" 
-                        VerticalAlignment="Top" />
+        <TextBox Grid.Column="2" Grid.Row="3" Text="{Binding Address}"                 
+                     Name="m_tbxAddress"
+                     Width="250" Margin="5" 
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Center" />
 
-            <ComboBox Grid.Column="2" Grid.Row="7" Name="m_cboLabel"
-                      Height="23" Width="250" Margin="20" 
-                      HorizontalAlignment="Left"
-                      VerticalAlignment="Top"  />
+        <TextBox Grid.Column="2" Grid.Row="4" Text="{Binding City}" 
+                     Name="m_tbxCity"
+                     Width="250" Margin="5"
+                     HorizontalAlignment="Left"      
+                     VerticalAlignment="Center"  />
 
-            <!--Buttons-->
-            <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,428,6,0" Name="button1" VerticalAlignment="Top" Width="75" />
-            <Button Content="OK" HorizontalAlignment="Right" Margin="0,428,87,6" Name="button2" Width="75" Click="button2_Click" />
+        <TextBox Grid.Column="2" Grid.Row="5" Text="{Binding Country, Mode=OneWay}"
+                     Name="m_tbxCurrTime" 
+                     Width="250"  Margin="5"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Center"  />
 
+        <!--//TODO-->
+        
+        <DatePicker Grid.Column="2" Grid.Row="7" DisplayDate="{Binding CurrentTime, Mode=OneWay}" 
+                    Name="datePicker1" 
+                    Width="250" Margin="5"
+                    HorizontalAlignment="Right"                    
+                    VerticalAlignment="Center" />
 
+        <ComboBox Grid.Column="2" Grid.Row="8" Name="m_cboLabel"
+                    Width="250" Margin="5"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"  />
 
-            <GroupBox Header="m_gbxData" Height="394" HorizontalAlignment="Left" Margin="410,23,0,0" Name="groupBox1" VerticalAlignment="Top" Width="653">
-                <Calendar DisplayDate="{Binding DayTimeSaved}"  Height="144" HorizontalAlignment="Left" Margin="453,0,0,266" Name="calendar1" Width="179" />
-            </GroupBox>
-            <Button FontWeight="Bold" Width="130 " Height="24">
-                <WrapPanel>
-                    <TextBlock Foreground="Blue">Multi</TextBlock>
-                    <TextBlock Foreground="Red">Color</TextBlock>
-                    <TextBlock>Button</TextBlock>
-                </WrapPanel>
-            </Button>
-            <Label Content="Date :" Height="24" HorizontalAlignment="Left" Margin="6,204,0,0" Name="m_lblDate" VerticalAlignment="Top" Width="73" />
-            <ContentControl Height="100" HorizontalAlignment="Left" Margin="433,299,0,0" Name="contentControl1" VerticalAlignment="Top" Width="418" />
-        </Grid>
+        <PasswordBox Grid.Column="2" Grid.Row="9" 
+                     Name="m_pbxPassword"
+                     Width="250" Margin="5"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Center" />
+
+        <StackPanel Grid.Column="2" Grid.Row="10">
+            <RadioButton  Content="Male"
+                     Name="m_rbxGenderM"
+                     Margin="5" />
+            <RadioButton Grid.Column="2" Grid.Row="10" Content="Female"
+                     Name="m_rbxGenderF"
+                     Margin="5" />
+        </StackPanel>
+
+        <!--Third column-->
+        <Calendar Grid.Column="3" Grid.Row="1" Grid.RowSpan="4" DisplayDate="{Binding DayTimeSaved}"
+                          Name="calendar1"
+                          Height="auto" Width="auto" Margin="5"
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Top"
+                          />
+
+        <!--Some example for multicolor button-->
+        <Button Grid.Column="3" Grid.Row="5" 
+                FontWeight="Bold" 
+                Width="130 " Height="24" Margin="5">
+            <WrapPanel Width="auto">
+                <TextBlock Foreground="Green">ON</TextBlock>
+                <Label> | </Label>
+                <TextBlock Foreground="Red"> OFF</TextBlock>
+                <!--<TextBlock>Button</TextBlock>-->
+            </WrapPanel>
+        </Button>
+
+        <!--Buttons: Ok, cancel-->
+        <Button Grid.Column="3" Grid.Row="9" Name="m_btnCancel"
+                Content="Cancel" 
+                Height="23" Width="75" Margin="5"
+                HorizontalAlignment="Right" IsCancel="True" />
+
+        <Button Grid.Column="3" Grid.Row="9" Name="m_btnOk" 
+            Content="OK" 
+            Height="23" Width="75"  Margin="5,5,85,5"
+            HorizontalAlignment="Right" 
+            Click="button2_Click" />
     </Grid>
 </Window>
