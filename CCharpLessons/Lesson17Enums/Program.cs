@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Lesson17Enums
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public enum Volume: byte
     {
         [Description("Low")]
@@ -14,6 +17,7 @@ namespace Lesson17Enums
         [Description("High")]
         High    = 3 
     }
+
     class Program
     {
         static void Main(string[] args)
