@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Lesson12Structs
 {
@@ -8,66 +6,41 @@ namespace Lesson12Structs
     //Another difference between a struct and class is that a struct can't 
     //have implementation inheritance, but a class can
 
+    /// <summary>
+    /// 
+    /// </summary>
     struct Rectangle
     {
-        private uint width;
-        private uint height;
-        public uint Width
-        {
-            set
-            {
-                width = value;
-            }
-            get
-            {
-                return width;
-            }
-        }
+        p'ublic uint Width { set; get; }
 
-        public uint Height
-        {
-            set
-            {
-                height = value;
-            }
-            get
-            {
-                return height;
-            }
-        }
+        public uint Height { set; get; }
     }
+
     //Overloading struct Constructors
-struct RectangleV1
-{    
-    private int m_width;
-    private int m_height;
-     
-    public int Width 
+    struct RectangleV1
     {
-        get
-        {
-            return m_width;
-        }
-        set
-        {
-            m_width = value;
-        }
-    }      
-    
-    public int Height
-    {
-        get
-        {
-            return m_height;
-        }
-        set
-        {
-            m_height = value;
-        }
-    } 
-    public RectangleV1(int width, int height) 
-    { m_width = width; m_height = height; }
-}
+        /// <summary>
+        /// 
+        /// </summary>
+        public int Width { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public int Height { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        public RectangleV1(int width, int height)
+        { Width = width; Height = height; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -76,7 +49,7 @@ struct RectangleV1
             Rectangle myRec = new Rectangle();
             myRec.Height = 10;
             myRec.Width = 200;
-            Console.WriteLine("width:{0} height:{1}",myRec.Width, myRec.Height);
+            Console.WriteLine("width:{0} height:{1}", myRec.Width, myRec.Height);
             ///????
             //Rectangle rect1 = new Rectangle
             //{
@@ -84,7 +57,7 @@ struct RectangleV1
             //   Width = 15
             //};
             Console.WriteLine("Struct Rectangle: Overloaded constructor");
-            RectangleV1 myRecv1 = new RectangleV1(10,10);
+            RectangleV1 myRecv1 = new RectangleV1(10, 10);
             Console.WriteLine("width:{0} height:{1}", myRecv1.Width, myRecv1.Height);
             Console.ReadKey();
 

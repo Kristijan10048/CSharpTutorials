@@ -1,14 +1,19 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Lesson13Interfaces
 {
+    /// <summary>
+    /// 
+    /// </summary>
     interface IParentInterface
     {
         void ParentInterfaceMethod();
         int ParentIntMethod();
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
     class InterfaceInplementer : IParentInterface
     {
         public void ParentInterfaceMethod()
@@ -21,6 +26,10 @@ namespace Lesson13Interfaces
             return 0;
         }
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
