@@ -1,0 +1,16 @@
+E:\Repository\CsharpLessons\CCharpLessons\ExtensionMethods\bin\Debug\ExtensionMethods.exe
+E:\Repository\CsharpLessons\CCharpLessons\ExtensionMethods\bin\Debug\ExtensionMethods.pdb
+E:\Repository\CsharpLessons\CCharpLessons\ExtensionMethods\obj\x86\Debug\ExtensionMethods.exe
+E:\Repository\CsharpLessons\CCharpLessons\ExtensionMethods\obj\x86\Debug\ExtensionMethods.pdb
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\ExtensionMethods\obj\x86\Debug\ExtensionMethods.exe
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\ExtensionMethods\obj\x86\Debug\ExtensionMethods.pdb
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\ExtensionMethods\bin\Debug\ExtensionMethods.exe
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\ExtensionMethods\bin\Debug\ExtensionMethods.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\ExtensionMethods\obj\x86\Debug\ExtensionMethods.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\ExtensionMethods\obj\x86\Debug\ExtensionMethods.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\ExtensionMethods\obj\x86\Debug\ExtensionMethods.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\ExtensionMethods\obj\x86\Debug\ExtensionMethods.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\ExtensionMethods\bin\Debug\ExtensionMethods.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\ExtensionMethods\bin\Debug\ExtensionMethods.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\ExtensionMethods\obj\x86\Debug\ExtensionMethods.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\ExtensionMethods\obj\x86\Debug\ExtensionMethods.pdb

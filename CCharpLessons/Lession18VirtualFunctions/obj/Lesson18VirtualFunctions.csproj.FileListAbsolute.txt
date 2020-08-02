@@ -1,0 +1,5 @@
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\Lession18VirtualFunctions\bin\Debug\Lession18VirtualFunctions.exe
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\Lession18VirtualFunctions\bin\Debug\Lession18VirtualFunctions.pdb
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\Lession18VirtualFunctions\obj\Debug\ResolveAssemblyReference.cache
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\Lession18VirtualFunctions\obj\Debug\Lession18VirtualFunctions.exe
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\Lession18VirtualFunctions\obj\Debug\Lession18VirtualFunctions.pdb

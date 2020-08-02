@@ -1,0 +1,15 @@
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Reflection\bin\Debug\Reflection.exe
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Reflection\bin\Debug\Reflection.pdb
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Reflection\obj\x86\Debug\Reflection.exe
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Reflection\obj\x86\Debug\Reflection.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Reflection\bin\Debug\Reflection.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Reflection\bin\Debug\Reflection.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Reflection\obj\x86\Debug\Reflection.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Reflection\obj\x86\Debug\Reflection.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Reflection\obj\x86\Debug\Reflection.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\Reflection\bin\Debug\Reflection.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\Reflection\bin\Debug\Reflection.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\Reflection\obj\x86\Debug\Reflection.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\Reflection\obj\x86\Debug\Reflection.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\Reflection\obj\x86\Debug\Reflection.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\Reflection\obj\x86\Debug\Reflection.csprojResolveAssemblyReference.cache

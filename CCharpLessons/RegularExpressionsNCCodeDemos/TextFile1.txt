@@ -1,0 +1,3 @@
+﻿NCCode Grammer
+
+N<LineNumb> <CordinateMode:OPT> <MotionType:OPT??> <positon: x,y,z> <orientaton euler: angles>

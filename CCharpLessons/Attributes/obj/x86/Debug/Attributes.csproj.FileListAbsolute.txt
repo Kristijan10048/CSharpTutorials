@@ -1,0 +1,14 @@
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Attributes\bin\Debug\Attributes.exe
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Attributes\bin\Debug\Attributes.pdb
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Attributes\obj\x86\Debug\Attributes.exe
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Attributes\obj\x86\Debug\Attributes.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Attributes\bin\Debug\Attributes.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Attributes\bin\Debug\Attributes.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Attributes\obj\x86\Debug\Attributes.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Attributes\obj\x86\Debug\Attributes.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\Attributes\obj\x86\Debug\Attributes.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\Attributes\bin\Debug\Attributes.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\Attributes\bin\Debug\Attributes.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\Attributes\obj\x86\Debug\Attributes.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\Attributes\obj\x86\Debug\Attributes.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\Attributes\obj\x86\Debug\Attributes.pdb

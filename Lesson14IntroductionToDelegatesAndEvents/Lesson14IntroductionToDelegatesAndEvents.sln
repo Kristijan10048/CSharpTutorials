@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson14IntroductionToDelegatesAndEvents", "Lesson14IntroductionToDelegatesAndEvents\Lesson14IntroductionToDelegatesAndEvents.csproj", "{44FF70E2-861B-401F-859C-F07C9F631649}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventDemo", "EventDemo\EventDemo.csproj", "{A6F6EC96-A14C-4E12-BAFC-3237EE9D0E6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44FF70E2-861B-401F-859C-F07C9F631649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44FF70E2-861B-401F-859C-F07C9F631649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44FF70E2-861B-401F-859C-F07C9F631649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44FF70E2-861B-401F-859C-F07C9F631649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6F6EC96-A14C-4E12-BAFC-3237EE9D0E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6F6EC96-A14C-4E12-BAFC-3237EE9D0E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6F6EC96-A14C-4E12-BAFC-3237EE9D0E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6F6EC96-A14C-4E12-BAFC-3237EE9D0E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

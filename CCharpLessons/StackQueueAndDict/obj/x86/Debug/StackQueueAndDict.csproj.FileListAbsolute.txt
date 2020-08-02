@@ -1,0 +1,14 @@
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\StackQueueAndDict\bin\Debug\StackQueueAndDict.exe
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\StackQueueAndDict\bin\Debug\StackQueueAndDict.pdb
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\StackQueueAndDict\obj\x86\Debug\StackQueueAndDict.exe
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\StackQueueAndDict\obj\x86\Debug\StackQueueAndDict.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\StackQueueAndDict\bin\Debug\StackQueueAndDict.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\StackQueueAndDict\bin\Debug\StackQueueAndDict.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\StackQueueAndDict\obj\x86\Debug\StackQueueAndDict.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\StackQueueAndDict\obj\x86\Debug\StackQueueAndDict.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\StackQueueAndDict\obj\x86\Debug\StackQueueAndDict.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\StackQueueAndDict\bin\Debug\StackQueueAndDict.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\StackQueueAndDict\bin\Debug\StackQueueAndDict.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\StackQueueAndDict\obj\x86\Debug\StackQueueAndDict.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\StackQueueAndDict\obj\x86\Debug\StackQueueAndDict.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\StackQueueAndDict\obj\x86\Debug\StackQueueAndDict.pdb

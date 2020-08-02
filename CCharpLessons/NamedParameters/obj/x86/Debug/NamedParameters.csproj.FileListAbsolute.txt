@@ -1,0 +1,10 @@
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\NamedParameters\bin\Debug\NamedParameters.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\NamedParameters\bin\Debug\NamedParameters.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\NamedParameters\obj\x86\Debug\NamedParameters.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\NamedParameters\obj\x86\Debug\NamedParameters.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\NamedParameters\obj\x86\Debug\NamedParameters.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\NamedParameters\bin\Debug\NamedParameters.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\NamedParameters\bin\Debug\NamedParameters.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\NamedParameters\obj\x86\Debug\NamedParameters.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\NamedParameters\obj\x86\Debug\NamedParameters.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\NamedParameters\obj\x86\Debug\NamedParameters.pdb

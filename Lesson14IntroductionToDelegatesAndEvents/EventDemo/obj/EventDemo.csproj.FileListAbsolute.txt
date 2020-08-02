@@ -1,0 +1,8 @@
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\Lesson14IntroductionToDelegatesAndEvents\EventDemo\obj\Debug\ResolveAssemblyReference.cache
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\Lesson14IntroductionToDelegatesAndEvents\EventDemo\obj\Debug\EventDemo.Form1.resources
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\Lesson14IntroductionToDelegatesAndEvents\EventDemo\obj\Debug\EventDemo.Properties.Resources.resources
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\Lesson14IntroductionToDelegatesAndEvents\EventDemo\obj\Debug\EventDemo.csproj.GenerateResource.Cache
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\Lesson14IntroductionToDelegatesAndEvents\EventDemo\bin\Debug\EventDemo.exe
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\Lesson14IntroductionToDelegatesAndEvents\EventDemo\bin\Debug\EventDemo.pdb
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\Lesson14IntroductionToDelegatesAndEvents\EventDemo\obj\Debug\EventDemo.exe
+E:\Trainings\MyTrainingTechomatix\CsharpLessons\Lesson14IntroductionToDelegatesAndEvents\EventDemo\obj\Debug\EventDemo.pdb

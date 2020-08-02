@@ -1,0 +1,14 @@
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\HelloWorld\bin\Debug\HelloWorld.exe
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\HelloWorld\bin\Debug\HelloWorld.pdb
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\HelloWorld\obj\x86\Debug\HelloWorld.exe
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\HelloWorld\obj\x86\Debug\HelloWorld.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\HelloWorld\bin\Debug\HelloWorld.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\HelloWorld\bin\Debug\HelloWorld.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\HelloWorld\obj\x86\Debug\HelloWorld.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\HelloWorld\obj\x86\Debug\HelloWorld.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\HelloWorld\obj\x86\Debug\HelloWorld.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\HelloWorld\bin\Debug\HelloWorld.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\HelloWorld\bin\Debug\HelloWorld.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\HelloWorld\obj\x86\Debug\HelloWorld.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\HelloWorld\obj\x86\Debug\HelloWorld.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\HelloWorld\obj\x86\Debug\HelloWorld.pdb

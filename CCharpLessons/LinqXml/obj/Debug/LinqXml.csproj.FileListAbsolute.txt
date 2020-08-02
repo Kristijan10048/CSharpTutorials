@@ -1,0 +1,17 @@
+E:\Siemens_Project_files\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\LinqXml\bin\Debug\LinqXml.exe
+E:\Siemens_Project_files\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\LinqXml\bin\Debug\LinqXml.pdb
+E:\Siemens_Project_files\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\LinqXml\obj\Debug\LinqXml.exe
+E:\Siemens_Project_files\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\LinqXml\obj\Debug\LinqXml.pdb
+E:\Siemens_Project_files\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\LinqXml\obj\Debug\LinqXml.csprojResolveAssemblyReference.cache
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\LinqXml\bin\Debug\LinqXml.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\LinqXml\bin\Debug\LinqXml.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\LinqXml\obj\Debug\LinqXml.csprojResolveAssemblyReference.cache
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\LinqXml\obj\Debug\LinqXml.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\LinqXml\obj\Debug\LinqXml.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\LinqXml\obj\Debug\LinqXml.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\LinqXml\bin\Debug\LinqXml.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\LinqXml\bin\Debug\LinqXml.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\LinqXml\obj\Debug\LinqXml.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\LinqXml\obj\Debug\LinqXml.exe
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\LinqXml\obj\Debug\LinqXml.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\LinqXml\obj\Debug\LinqXml.csprojResolveAssemblyReference.cache

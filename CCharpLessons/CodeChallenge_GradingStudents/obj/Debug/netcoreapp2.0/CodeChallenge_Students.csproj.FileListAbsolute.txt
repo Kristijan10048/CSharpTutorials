@@ -1,0 +1,11 @@
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_GradingStudents\bin\Debug\netcoreapp2.0\CodeChallenge_Students.deps.json
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_GradingStudents\bin\Debug\netcoreapp2.0\CodeChallenge_Students.runtimeconfig.json
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_GradingStudents\bin\Debug\netcoreapp2.0\CodeChallenge_Students.runtimeconfig.dev.json
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_GradingStudents\bin\Debug\netcoreapp2.0\CodeChallenge_Students.dll
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_GradingStudents\bin\Debug\netcoreapp2.0\CodeChallenge_Students.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_GradingStudents\obj\Debug\netcoreapp2.0\CodeChallenge_Students.csprojResolveAssemblyReference.cache
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_GradingStudents\obj\Debug\netcoreapp2.0\CodeChallenge_Students.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_GradingStudents\obj\Debug\netcoreapp2.0\CodeChallenge_Students.AssemblyInfoInputs.cache
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_GradingStudents\obj\Debug\netcoreapp2.0\CodeChallenge_Students.AssemblyInfo.cs
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_GradingStudents\obj\Debug\netcoreapp2.0\CodeChallenge_Students.dll
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_GradingStudents\obj\Debug\netcoreapp2.0\CodeChallenge_Students.pdb

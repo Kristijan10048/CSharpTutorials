@@ -43,6 +43,7 @@ namespace DemosWPF
 
         /// <summary>
         /// Returns current Time
+        /// The format is in : 
         /// </summary>
         public DateTime CurrentTime
         {

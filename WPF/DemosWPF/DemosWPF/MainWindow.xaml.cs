@@ -31,6 +31,7 @@ namespace DemosWPF
             {
                 FirstName = "Test",
                 LastName = "Testovski",
+                Country = "Some Coundry",
                 City = "Knowhere",
                 Address = "Somewhere",
             };

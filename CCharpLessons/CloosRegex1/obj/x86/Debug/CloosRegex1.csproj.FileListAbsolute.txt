@@ -1,0 +1,17 @@
+E:\Siemens_Project_files\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\CloosRegex1\bin\Debug\CloosRegex1.exe
+E:\Siemens_Project_files\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\CloosRegex1\bin\Debug\CloosRegex1.pdb
+E:\Siemens_Project_files\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\CloosRegex1\obj\x86\Debug\CloosRegex1.exe
+E:\Siemens_Project_files\Trainings\MyTrainingTechomatix\CsharpLessons\CCharpLessons\CloosRegex1\obj\x86\Debug\CloosRegex1.pdb
+E:\Repository\CsharpLessons\CCharpLessons\CloosRegex1\bin\Debug\CloosRegex1.exe
+E:\Repository\CsharpLessons\CCharpLessons\CloosRegex1\bin\Debug\CloosRegex1.pdb
+E:\Repository\CsharpLessons\CCharpLessons\CloosRegex1\obj\x86\Debug\CloosRegex1.exe
+E:\Repository\CsharpLessons\CCharpLessons\CloosRegex1\obj\x86\Debug\CloosRegex1.pdb
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\CloosRegex1\bin\Debug\CloosRegex1.exe
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\CloosRegex1\bin\Debug\CloosRegex1.pdb
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\CloosRegex1\obj\x86\Debug\CloosRegex1.exe
+E:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\CloosRegex1\obj\x86\Debug\CloosRegex1.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\CloosRegex1\bin\Debug\CloosRegex1.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\CloosRegex1\bin\Debug\CloosRegex1.pdb
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\CloosRegex1\obj\x86\Debug\CloosRegex1.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\CloosRegex1\obj\x86\Debug\CloosRegex1.exe
+D:\Repository\GitHub\NewRepo\diplomska\CsharpLessons\CCharpLessons\CloosRegex1\obj\x86\Debug\CloosRegex1.pdb

@@ -1,0 +1,11 @@
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_BinaryConversion\bin\Debug\netcoreapp2.0\CodeChallenge_BinaryConversion.deps.json
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_BinaryConversion\bin\Debug\netcoreapp2.0\CodeChallenge_BinaryConversion.runtimeconfig.json
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_BinaryConversion\bin\Debug\netcoreapp2.0\CodeChallenge_BinaryConversion.runtimeconfig.dev.json
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_BinaryConversion\bin\Debug\netcoreapp2.0\CodeChallenge_BinaryConversion.dll
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_BinaryConversion\bin\Debug\netcoreapp2.0\CodeChallenge_BinaryConversion.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_BinaryConversion\obj\Debug\netcoreapp2.0\CodeChallenge_BinaryConversion.csproj.CoreCompileInputs.cache
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_BinaryConversion\obj\Debug\netcoreapp2.0\CodeChallenge_BinaryConversion.AssemblyInfoInputs.cache
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_BinaryConversion\obj\Debug\netcoreapp2.0\CodeChallenge_BinaryConversion.AssemblyInfo.cs
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_BinaryConversion\obj\Debug\netcoreapp2.0\CodeChallenge_BinaryConversion.dll
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_BinaryConversion\obj\Debug\netcoreapp2.0\CodeChallenge_BinaryConversion.pdb
+D:\Repository\GitHub\CSharpTutorials\CCharpLessons\CodeChallenge_BinaryConversion\obj\Debug\netcoreapp2.0\CodeChallenge_BinaryConversion.csprojResolveAssemblyReference.cache
