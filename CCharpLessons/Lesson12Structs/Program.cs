@@ -11,7 +11,7 @@ namespace Lesson12Structs
     /// </summary>
     struct Rectangle
     {
-        p'ublic uint Width { set; get; }
+        public uint Width { set; get; }
 
         public uint Height { set; get; }
     }

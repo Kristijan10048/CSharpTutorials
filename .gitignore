@@ -2,3 +2,8 @@
 /html/
 /Doxyfile
 *.exe
+*.cache
+*.pdb
+*.exe.config
+**/bin/*
+**/obj/*
