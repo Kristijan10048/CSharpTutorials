@@ -7,3 +7,8 @@
 *.exe.config
 **/bin/*
 **/obj/*
+/CCharpLessons/.vs/ProjectEvaluation/
+/CCharpLessons/.vs/CCharpLessons/DesignTimeBuild/
+*.vsidx
+*.nuget.cache
+/CCharpLessons/.vs/CCharpLessons/v17/.futdcache.v2
