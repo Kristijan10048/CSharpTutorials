@@ -1,8 +1,10 @@
 using System.Text.Json.Serialization;
+using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Data.Sqlite;
 using System.IO;
 using SQLitePCL;
+[assembly: InternalsVisibleTo("SimpleRESTApi.Tests")]
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
