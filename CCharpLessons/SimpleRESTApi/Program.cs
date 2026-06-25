@@ -55,6 +55,13 @@ static class Endpoints
         // Echo back a simple object
         return TypedResults.Ok(new { Message = "Received", Received = request.Message });
     }
+
+    // POST endpoint that accepts two string parameters in the JSON body
+    public static IResult PostTwoParams(TwoParamsRequest request)
+    {
+        // Return the received parameters in the response
+        return TypedResults.Ok(new { Param1 = request.Param1, Param2 = request.Param2 });
+    }
 }
 
 // Map the full-method endpoints
@@ -65,11 +72,17 @@ app.MapGet("/test-full", Endpoints.TestFull)
 app.MapPost("/test-demo", Endpoints.PostDemo)
    .WithName("TestDemo");
 
+// Map POST endpoint that accepts two string params
+app.MapPost("/test-two-params", Endpoints.PostTwoParams)
+   .WithName("TestTwoParams");
+
 app.Run();
 
 public record Todo(int Id, string? Title, DateOnly? DueBy = null, bool IsComplete = false);
 
 public record DemoRequest(string Message);
+
+public record TwoParamsRequest(string Param1, string Param2);
 
 [JsonSerializable(typeof(Todo[]))]
 internal partial class AppJsonSerializerContext : JsonSerializerContext
