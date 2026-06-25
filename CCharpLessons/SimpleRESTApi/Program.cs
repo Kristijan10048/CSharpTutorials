@@ -37,9 +37,39 @@ todosApi.MapGet("/{id}", Results<Ok<Todo>, NotFound> (int id) =>
         : TypedResults.NotFound())
     .WithName("GetTodoById");
 
+// Additional test endpoint
+app.MapGet("/test", () => "Test Message")
+   .WithName("TestEndpoint");
+
+// Full method endpoint defined as a regular static method in a helper class
+static class Endpoints
+{
+    public static string TestFull()
+    {
+        return "Test Message";
+    }
+
+    // Demo POST endpoint method - accepts a JSON body and returns a simple response
+    public static IResult PostDemo(DemoRequest request)
+    {
+        // Echo back a simple object
+        return TypedResults.Ok(new { Message = "Received", Received = request.Message });
+    }
+}
+
+// Map the full-method endpoints
+app.MapGet("/test-full", Endpoints.TestFull)
+   .WithName("TestFull");
+
+// Map POST endpoint that uses the full method
+app.MapPost("/test-demo", Endpoints.PostDemo)
+   .WithName("TestDemo");
+
 app.Run();
 
 public record Todo(int Id, string? Title, DateOnly? DueBy = null, bool IsComplete = false);
+
+public record DemoRequest(string Message);
 
 [JsonSerializable(typeof(Todo[]))]
 internal partial class AppJsonSerializerContext : JsonSerializerContext
