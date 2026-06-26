@@ -76,6 +76,17 @@ todosApi.MapGet("/{id}", (HttpContext ctx) =>
 app.MapGet("/test", () => "Test Message")
    .WithName("TestEndpoint");
 
+app.MapGet("/testcstr", () => "Test Const str")
+   .WithName("TestCstr");
+
+
+app.MapGet("/testFnCall", testFn)
+   .WithName("TestFnCall");
+
+String testFn()
+{
+    return "Test Function call";
+}
 
 // Initialize endpoints with db path
 var loggerFactory = app.Services.GetRequiredService<ILoggerFactory>();
