@@ -102,6 +102,8 @@ public record DemoRequest(string Message);
 public record TwoParamsRequest(string Param1, string Param2);
 
 [JsonSerializable(typeof(Todo[]))]
+[JsonSerializable(typeof(DemoRequest))]
+[JsonSerializable(typeof(TwoParamsRequest))]
 internal partial class AppJsonSerializerContext : JsonSerializerContext
 {
 
