@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using Microsoft.Data.Sqlite;
+using Microsoft.Extensions.Logging;
 using Xunit;
 
 namespace SimpleRESTApi.Tests
@@ -28,8 +29,11 @@ namespace SimpleRESTApi.Tests
                     cmd.ExecuteNonQuery();
                 }
 
-                // Initialize the endpoints helper with the test DB path
-                Endpoints.Init(dbPath);
+                // Create a mock logger factory for testing
+                var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole().SetMinimumLevel(LogLevel.Trace));
+
+                // Initialize the endpoints helper with the test DB path and logger factory
+                Endpoints.Init(dbPath, loggerFactory);
 
                 // Execute the method under test
                 var result = Endpoints.PostTwoParams(new TwoParamsRequest("alpha", "beta"));
