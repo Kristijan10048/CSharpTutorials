@@ -1,5 +1,6 @@
 using System;
 
+public record DestinationMachine(long Id, string Name, string ip_address, string? SerialNumber, string CreatedUtc);
 public record User(long Id, string Username, string? Email, string CreatedUtc);
 
 public record Device(long Id, string Name, string? SerialNumber, long UserId, string CreatedUtc);
