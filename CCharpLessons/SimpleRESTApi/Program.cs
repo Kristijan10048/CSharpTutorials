@@ -72,21 +72,16 @@ todosApi.MapGet("/{id}", (HttpContext ctx) =>
 })
 .WithName("GetTodoById");
 
-// Additional test endpoint
-app.MapGet("/test", () => "Test Message")
+// Additional test endpoint - moved to TestEndpoints class
+app.MapGet("/test", TestEndpoints.Test)
    .WithName("TestEndpoint");
 
-app.MapGet("/testcstr", () => "Test Const str")
+app.MapGet("/testcstr", TestEndpoints.TestCstr)
    .WithName("TestCstr");
 
-
-app.MapGet("/testFnCall", testFn)
+app.MapGet("/testFnCall", TestEndpoints.TestFnCall)
    .WithName("TestFnCall");
 
-String testFn()
-{
-    return "Test Function call";
-}
 
 // Initialize endpoints with db path
 var loggerFactory = app.Services.GetRequiredService<ILoggerFactory>();
