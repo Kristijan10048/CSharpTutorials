@@ -38,10 +38,26 @@ using (var initConn = new SqliteConnection($"Data Source={dbPath}"))
 {
     initConn.Open();
     using var cmd = initConn.CreateCommand();
+    // Create Params, Users and Devices tables if they do not exist
     cmd.CommandText = @"CREATE TABLE IF NOT EXISTS Params (
         Id INTEGER PRIMARY KEY AUTOINCREMENT,
         Param1 TEXT,
         Param2 TEXT,
+        CreatedUtc TEXT
+    );
+
+    CREATE TABLE IF NOT EXISTS Users (
+        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+        Username TEXT NOT NULL,
+        Email TEXT,
+        CreatedUtc TEXT
+    );
+
+    CREATE TABLE IF NOT EXISTS Devices (
+        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+        Name TEXT NOT NULL,
+        SerialNumber TEXT,
+        UserId INTEGER,
         CreatedUtc TEXT
     );";
     cmd.ExecuteNonQuery();
@@ -110,6 +126,12 @@ public record TwoParamsRequest(string Param1, string Param2);
 [JsonSerializable(typeof(Todo[]))]
 [JsonSerializable(typeof(DemoRequest))]
 [JsonSerializable(typeof(TwoParamsRequest))]
+[JsonSerializable(typeof(User))]
+[JsonSerializable(typeof(User[]))]
+[JsonSerializable(typeof(Device))]
+[JsonSerializable(typeof(Device[]))]
+[JsonSerializable(typeof(CreateUserRequest))]
+[JsonSerializable(typeof(CreateDeviceRequest))]
 internal partial class AppJsonSerializerContext : JsonSerializerContext
 {
 
