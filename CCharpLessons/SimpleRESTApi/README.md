@@ -62,10 +62,36 @@ Notes about the PostTwoParams test
 - The test deletes the temporary DB file after completion.
 - A LoggerFactory configured with console logging is passed to Endpoints.Init() for logging during the test.
 
-Project dependencies (selected)
-- Microsoft.AspNetCore.OpenApi (10.x)
-- Microsoft.Data.Sqlite (7.x)
-- Microsoft.Extensions.Logging (for structured logging)
-- SQLitePCLRaw.bundle_e_sqlite3
+EF Core migrations (SQLite)
+-------------------------
 
-If you want integration tests (HttpClient/WebApplicationFactory) instead of the current unit test, I can add them.
+This project includes EF Core and a design-time factory so you can use dotnet-ef to manage migrations for the Users/Devices model.
+
+Prerequisites for migrations
+- dotnet-ef global tool: dotnet tool install --global dotnet-ef
+
+Design-time DB path
+- The AppDbContextFactory reads the SIMPLE_REST_DB environment variable when creating the design-time DbContext. If not set, it uses "simple_rest_api.db" in the current working directory. This lets you point migrations at a different DB file during development.
+
+Common commands (run from the SimpleRESTApi folder)
+
+cd CCharpLessons/SimpleRESTApi
+
+# Add a migration named "AddField"
+dotnet ef migrations add AddField --project . --startup-project .
+
+# Apply pending migrations to the database
+dotnet ef database update --project . --startup-project .
+
+Convenience PowerShell scripts
+- add-migration.ps1  — adds a migration (param: -Name)
+- update-database.ps1 — applies pending migrations to the DB
+
+Examples (PowerShell)
+./add-migration.ps1 -Name InitialCreate
+./update-database.ps1
+
+Notes
+- The app currently calls EnsureCreated() at startup to keep the app runnable without running migrations. For production or to use migrations properly, replace EnsureCreated() with Database.Migrate() to apply migrations automatically at startup.
+
+If you want, I can switch the app to call Database.Migrate() automatically at startup and/or add a script to run migrations at startup time.
