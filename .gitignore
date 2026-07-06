@@ -12,3 +12,4 @@
 *.vsidx
 *.nuget.cache
 /CCharpLessons/.vs/CCharpLessons/v17/.futdcache.v2
+/.vs/
