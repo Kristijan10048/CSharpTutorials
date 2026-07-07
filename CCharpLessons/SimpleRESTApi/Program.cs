@@ -3,6 +3,8 @@ using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+using System.Reflection;
 using Microsoft.Extensions.Logging;
 using System.IO;
 using SQLitePCL;
@@ -14,8 +16,43 @@ var builder = WebApplication.CreateSlimBuilder(args);
 var dbPath = Path.Combine(builder.Environment.ContentRootPath, "simple_rest_api.db");
 Directory.CreateDirectory(Path.GetDirectoryName(dbPath) ?? builder.Environment.ContentRootPath);
 
-// Register EF Core DbContext using the same SQLite file
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite($"Data Source={dbPath}"));
+// Register EF Core DbContext using the same SQLite file.
+// If a compiled model has been generated (see EF Core dbcontext optimize), try to register it.
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlite($"Data Source={dbPath}");
+
+    try
+    {
+        // Common generated model full type name used by dotnet ef dbcontext optimize.
+        // The generated type is typically in a CompiledModels namespace and has a
+        // public static Instance property exposing the IModel.
+        var typeNames = new[] {
+            "CompiledModels.AppDbContextModel, SimpleRESTApi",
+            "CompiledModels.AppDbContextModel, SimpleRESTApi",
+            // fallback without assembly, in case the generator used the project's root namespace
+            "CompiledModels.AppDbContextModel"
+        };
+
+        foreach (var tn in typeNames)
+        {
+            var t = Type.GetType(tn, throwOnError: false, ignoreCase: true);
+            if (t is null) continue;
+            var instProp = t.GetProperty("Instance", BindingFlags.Public | BindingFlags.Static);
+            if (instProp is null) continue;
+            var model = instProp.GetValue(null) as IModel;
+            if (model is null) continue;
+            options.UseModel(model);
+            break;
+        }
+    }
+    catch
+    {
+        // Ignore any errors here and let EF Core try to build the model at runtime
+        // (which will fail under NativeAOT). This fallback keeps behavior unchanged
+        // when no compiled model is present.
+    }
+});
 
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
@@ -58,7 +95,25 @@ using (var initConn = new SqliteConnection($"Data Source={dbPath}"))
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.EnsureCreated();
+    try
+    {
+        db.Database.EnsureCreated();
+    }
+    catch (InvalidOperationException ex) when (ex.Message?.Contains("NativeAOT") == true)
+    {
+        // When running as NativeAOT the runtime model building is not supported.
+        // If a compiled model has not been generated, skip EnsureCreated and log a warning.
+        var scopedLoggerFactory = scope.ServiceProvider.GetService<ILoggerFactory>();
+        if (scopedLoggerFactory is not null)
+        {
+            var logger = scopedLoggerFactory.CreateLogger("Startup");
+            logger.LogWarning(ex, "Skipping EnsureCreated because runtime model building is not supported with NativeAOT. Generate a compiled model with 'dotnet ef dbcontext optimize'.");
+        }
+        else
+        {
+            Console.WriteLine("Warning: Skipping EnsureCreated because runtime model building is not supported with NativeAOT. Generate a compiled model with 'dotnet ef dbcontext optimize'.");
+        }
+    }
 }
 
 var sampleTodos = new Todo[]
@@ -149,28 +204,8 @@ app.MapGet("/devices/{id}", async (int id, AppDbContext db) =>
     return device is null ? Results.NotFound() : Results.Ok(device);
 }).WithName("GetDeviceById");
 
+// Start the web application and listen for incoming requests
 app.Run();
-
-public record Todo(int Id, string? Title, DateOnly? DueBy = null, bool IsComplete = false);
-
-public record DemoRequest(string Message);
-
-public record TwoParamsRequest(string Param1, string Param2);
-
-[JsonSerializable(typeof(Todo[]))]
-[JsonSerializable(typeof(DemoRequest))]
-[JsonSerializable(typeof(TwoParamsRequest))]
-[JsonSerializable(typeof(User))]
-[JsonSerializable(typeof(User[]))]
-[JsonSerializable(typeof(Device))]
-[JsonSerializable(typeof(Device[]))]
-[JsonSerializable(typeof(DestinationMachine))]
-[JsonSerializable(typeof(CreateUserRequest))]
-[JsonSerializable(typeof(CreateDeviceRequest))]
-internal partial class AppJsonSerializerContext : JsonSerializerContext
-{
-
-}
 
 
 

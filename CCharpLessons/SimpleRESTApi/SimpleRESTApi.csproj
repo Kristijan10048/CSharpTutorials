@@ -18,5 +18,18 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-  
+
+  <!-- Generate a compiled EF Core model when publishing with NativeAOT. -->
+  <Target Name="GenerateCompiledModel" BeforeTargets="BeforePublish" Condition="'$(PublishAot)'=='true' and '$(DisableDbContextOptimize)'!='true'">
+    <Message Text="Running 'dotnet ef dbcontext optimize' to generate compiled EF Core model..." Importance="High" />
+    <!--
+      The command will generate a compiled model under CompiledModels namespace/folder.
+      ContinueOnError=true prevents publish from failing if dotnet-ef is not available.
+    -->
+    <Exec Command="dotnet ef dbcontext optimize --project &quot;$(MSBuildProjectFullPath)&quot; --startup-project &quot;$(MSBuildProjectFullPath)&quot; --output-dir CompiledModels --namespace CompiledModels" WorkingDirectory="$(ProjectDir)" ContinueOnError="true" />
+  </Target>
+  <!-- The SDK implicitly includes source files under the project folder, so do not
+       explicitly add CompiledModels\**\*.cs as Compile items to avoid duplicate
+       Compile item errors during build. -->
+
 </Project>
