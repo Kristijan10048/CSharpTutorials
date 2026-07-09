@@ -6,6 +6,16 @@ namespace Lesson5_1Methods
 {
     class RefMethodCl
     {
+
+        public void MethondNoRef(string str)
+        {
+            Console.WriteLine($"Input string {str}");
+            //Note value can be assignned to the parameter but its not mandatory
+            str = " test";
+            Console.WriteLine($"Input string after assignment {str}");
+        }
+
+
         /// <summary>
         /// Method with reference parameter. The parameter is changd in the method
         /// </summary>
