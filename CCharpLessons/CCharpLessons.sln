@@ -93,6 +93,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRESTApi", "SimpleREST
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson15IntroductionToExceptionHandling.Tests", "Lesson15IntroductionToExceptionHandling.Tests\Lesson15IntroductionToExceptionHandling.Tests.csproj", "{0351C2DB-2CC0-48D4-A624-DA44CF05B286}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson10-Properties.Tests", "Lesson10-Properties.Tests\Lesson10-Properties.Tests.csproj", "{988C0044-B7F0-40D4-83F8-13ED406A4084}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -657,6 +659,22 @@ Global
 		{0351C2DB-2CC0-48D4-A624-DA44CF05B286}.Release|Win32.Build.0 = Release|Any CPU
 		{0351C2DB-2CC0-48D4-A624-DA44CF05B286}.Release|x86.ActiveCfg = Release|Any CPU
 		{0351C2DB-2CC0-48D4-A624-DA44CF05B286}.Release|x86.Build.0 = Release|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Debug|Win32.Build.0 = Debug|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Debug|x86.Build.0 = Debug|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Release|Win32.ActiveCfg = Release|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Release|Win32.Build.0 = Release|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Release|x86.ActiveCfg = Release|Any CPU
+		{988C0044-B7F0-40D4-83F8-13ED406A4084}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
