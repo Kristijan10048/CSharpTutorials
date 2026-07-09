@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using System.Reflection;
 using Microsoft.Extensions.Logging;
 using System.IO;
@@ -14,13 +16,14 @@ var builder = WebApplication.CreateSlimBuilder(args);
 
 // Compute DB path early so we can register DbContext with the same SQLite file
 var dbPath = Path.Combine(builder.Environment.ContentRootPath, "simple_rest_api.db");
-Directory.CreateDirectory(Path.GetDirectoryName(dbPath) ?? builder.Environment.ContentRootPath);
+ Directory.CreateDirectory(Path.GetDirectoryName(dbPath) ?? builder.Environment.ContentRootPath);
 
 // Register EF Core DbContext using the same SQLite file.
 // If a compiled model has been generated (see EF Core dbcontext optimize), try to register it.
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlite($"Data Source={dbPath}");
+    // Ensure migrations are looked up in the DbContext assembly by default
+    options.UseSqlite($"Data Source={dbPath}", b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.GetName().Name));
 
     try
     {
@@ -95,24 +98,161 @@ using (var initConn = new SqliteConnection($"Data Source={dbPath}"))
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    var logger = scope.ServiceProvider.GetService<ILoggerFactory>()?.CreateLogger("Startup");
+
+    // Log migrations assembly and applied/pending migrations before attempting to migrate
     try
     {
-        db.Database.EnsureCreated();
+        var migrationsAssembly = db.GetService<IMigrationsAssembly>();
+        logger?.LogInformation("Migrations assembly: {Name}", migrationsAssembly?.Assembly?.GetName().Name ?? "(null)");
+
+        if (migrationsAssembly?.Migrations != null && migrationsAssembly.Migrations.Count > 0)
+        {
+            logger?.LogInformation("Migrations found: {Migs}", string.Join(", ", migrationsAssembly.Migrations.Keys));
+        }
+        else
+        {
+            logger?.LogWarning("No migration types discovered in migrations assembly.");
+        }
+
+        var appliedBefore = db.Database.GetAppliedMigrations().ToArray();
+        var pendingBefore = db.Database.GetPendingMigrations().ToArray();
+        logger?.LogInformation("Applied migrations (before Migrate): {Applied}", string.Join(", ", appliedBefore));
+        logger?.LogInformation("Pending migrations (before Migrate): {Pending}", string.Join(", ", pendingBefore));
+    }
+    catch (Exception ex)
+    {
+        logger?.LogWarning(ex, "Failed to retrieve migrations diagnostics before Migrate.");
+    }
+
+    try
+    {
+        // Apply EF Core migrations at startup so the DB schema matches the
+        // migrations included in the project. This is preferable to EnsureCreated
+        // when using migrations.
+        db.Database.Migrate();
+        logger?.LogInformation("Applied EF Core migrations to DB file: {DbPath}", dbPath);
+
+        // Log applied/pending after migration
+        try
+        {
+            var appliedAfter = db.Database.GetAppliedMigrations().ToArray();
+            var pendingAfter = db.Database.GetPendingMigrations().ToArray();
+            logger?.LogInformation("Applied migrations (after Migrate): {Applied}", string.Join(", ", appliedAfter));
+            logger?.LogInformation("Pending migrations (after Migrate): {Pending}", string.Join(", ", pendingAfter));
+        }
+        catch (Exception ex)
+        {
+            logger?.LogWarning(ex, "Failed to retrieve applied/pending migrations after Migrate.");
+        }
     }
     catch (InvalidOperationException ex) when (ex.Message?.Contains("NativeAOT") == true)
     {
         // When running as NativeAOT the runtime model building is not supported.
         // If a compiled model has not been generated, skip EnsureCreated and log a warning.
-        var scopedLoggerFactory = scope.ServiceProvider.GetService<ILoggerFactory>();
-        if (scopedLoggerFactory is not null)
+        if (logger is not null)
         {
-            var logger = scopedLoggerFactory.CreateLogger("Startup");
             logger.LogWarning(ex, "Skipping EnsureCreated because runtime model building is not supported with NativeAOT. Generate a compiled model with 'dotnet ef dbcontext optimize'.");
         }
         else
         {
             Console.WriteLine("Warning: Skipping EnsureCreated because runtime model building is not supported with NativeAOT. Generate a compiled model with 'dotnet ef dbcontext optimize'.");
         }
+    }
+    catch (Exception ex)
+    {
+        // If migrations fail for other reasons, attempt a dev-friendly EnsureCreated fallback
+        if (logger is not null)
+        {
+            logger.LogWarning(ex, "Migrate() failed, attempting EnsureCreated() fallback (dev only).");
+        }
+        else
+        {
+            Console.WriteLine($"Migrate() failed: {ex}. Attempting EnsureCreated() fallback (dev only).");
+        }
+
+        try
+        {
+            db.Database.EnsureCreated();
+            logger?.LogInformation("EnsureCreated() succeeded for DB file: {DbPath}", dbPath);
+        }
+        catch (Exception ex2)
+        {
+            if (logger is not null)
+                logger.LogError(ex2, "EnsureCreated() also failed - schema not present.");
+            else
+                Console.WriteLine($"EnsureCreated() also failed: {ex2}");
+
+            throw; // rethrow so startup fails visibly
+        }
+    }
+
+    // Log contents of __EFMigrationsHistory for diagnostics
+    try
+    {
+        using var histConn = new SqliteConnection($"Data Source={dbPath}");
+        histConn.Open();
+        using var histCmd = histConn.CreateCommand();
+        histCmd.CommandText = "SELECT MigrationId, ProductVersion FROM __EFMigrationsHistory ORDER BY MigrationId;";
+        using var histReader = histCmd.ExecuteReader();
+        var histRows = new System.Collections.Generic.List<string>();
+        while (histReader.Read())
+        {
+            var mig = histReader.IsDBNull(0) ? "(null)" : histReader.GetString(0);
+            var ver = histReader.IsDBNull(1) ? "(null)" : histReader.GetString(1);
+            histRows.Add($"{mig} (EF Core {ver})");
+        }
+
+        if (histRows.Count == 0)
+        {
+            logger?.LogInformation("__EFMigrationsHistory is empty for DB file: {DbPath}", dbPath);
+        }
+        else
+        {
+            logger?.LogInformation("__EFMigrationsHistory rows: {Rows}", string.Join("; ", histRows));
+        }
+    }
+    catch (Exception ex)
+    {
+        logger?.LogWarning(ex, "Failed to read __EFMigrationsHistory from DB file.");
+    }
+
+    // Log existing tables in the SQLite file to help diagnose schema issues
+    try
+    {
+        using var listConn = new SqliteConnection($"Data Source={dbPath}");
+        listConn.Open();
+        using var listCmd = listConn.CreateCommand();
+        listCmd.CommandText = "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;";
+        using var reader = listCmd.ExecuteReader();
+        var tables = new System.Collections.Generic.List<string>();
+        while (reader.Read())
+        {
+            tables.Add(reader.GetString(0));
+        }
+
+        foreach (var table in tables)
+        {
+            logger?.LogInformation("Table found: {Table}", table);
+        }
+
+        if (tables.Count == 0)
+        {
+            logger?.LogWarning("No tables found in SQLite database. Schema might not be initialized.");
+        }
+    }
+    catch (Exception ex)
+    {
+        // Log diagnostics error but don't stop startup
+        var scopedLoggerFactory = scope.ServiceProvider.GetService<ILoggerFactory>();
+        var diagLogger = scopedLoggerFactory is not null
+            ? scopedLoggerFactory.CreateLogger("Startup")
+            : null;
+
+        if (diagLogger is not null)
+            diagLogger.LogWarning(ex, "Failed to list SQLite tables for diagnostics");
+        else
+            Console.WriteLine($"Failed to list SQLite tables: {ex}");
     }
 }
 
@@ -206,6 +346,10 @@ app.MapGet("/devices/{id}", async (int id, AppDbContext db) =>
 
 // Start the web application and listen for incoming requests
 app.Run();
+
+
+
+
 
 
 
