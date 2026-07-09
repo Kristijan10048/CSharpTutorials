@@ -6,7 +6,7 @@ using System.IO;
 namespace Lesson15IntroductionToExceptionHandling
 {
 
-    class TryCathcDemo
+    public class MyTryCatchDemo
     {
         public void Start()
         {
@@ -29,13 +29,27 @@ namespace Lesson15IntroductionToExceptionHandling
             }
 
         }
+
+        public bool canTryCatch(int iNumb1 = 0, int iNumb2 = 0)
+        {
+            try
+            {
+                return iNumb1 == iNumb2;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("General exception:\n" + ex.ToString());
+                return false;
+            }
+        }
+
     }
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Error handling demo");
-            TryCathcDemo tyDemo = new TryCathcDemo();
+            MyTryCatchDemo tyDemo = new MyTryCatchDemo();
             tyDemo.Start();
             Console.ReadKey();
         }
