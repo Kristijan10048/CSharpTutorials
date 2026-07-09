@@ -37,10 +37,12 @@ namespace Lesson10Properties
     {
         private int id;
         private string name;
+        
         public void SetName(string n)
         {
             this.name = n;
         }
+        
         public int ID
         {
            get { return id; }
