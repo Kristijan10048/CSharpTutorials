@@ -51,7 +51,7 @@ namespace Lesson19HybridDictionary
             }
         }
 
-        public System.Collections.ICollection getVales()
+        public System.Collections.ICollection GetValues()
         {
             return m_hb.Values;
         }
