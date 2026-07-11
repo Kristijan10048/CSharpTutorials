@@ -12,7 +12,7 @@ namespace Lesson19HybridDictionary
         private HybridDictionary m_hb;
 
         #region Public Methods
-        public void HybridDictionaryExample()
+        public HybridDictionaryDemo()
         {
             m_hb = new HybridDictionary();
         }
