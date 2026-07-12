@@ -6,10 +6,55 @@ namespace Lesson12Structs
     //Another difference between a struct and class is that a struct can't 
     //have implementation inheritance, but a class can
 
+
+    public struct Point
+    {
+        public int X;
+        public int Y;
+        public Point(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
+    }
+
+    // Structures cannot be inherited from another structure or class. However, they can implement interfaces.
+    internal struct Point3d
+    {
+        private Point Base;
+        public int X { get { return Base.X; } }
+        public int Y { get { return Base.Y; } }
+        public int Z;
+
+        public Point3d(Point basePoint, int z)
+        {
+            Base = basePoint;
+            Z = z;
+        }
+
+        Point3d(int x, int y, int z)
+        {
+            Base = new Point(x, y);
+            Z = z;
+        }
+    }
+
+
+    public struct Line
+    {
+        public Point Start;
+        public Point End;
+        public Line(Point start, Point end)
+        {
+            Start = start;
+            End = end;
+        }
+    }
+
     /// <summary>
     /// 
     /// </summary>
-    struct Rectangle
+    public struct Rectangle
     {
         public uint Width { set; get; }
 
@@ -17,7 +62,7 @@ namespace Lesson12Structs
     }
 
     //Overloading struct Constructors
-    struct RectangleV1
+    public struct RectangleV1
     {
         /// <summary>
         /// 
