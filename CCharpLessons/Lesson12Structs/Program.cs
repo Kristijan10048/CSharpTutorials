@@ -56,6 +56,12 @@ namespace Lesson12Structs
     /// </summary>
     public struct Rectangle
     {
+        public Rectangle(uint width, uint height)
+        {
+            Width = width;
+            Height = height;
+        }
+
         public uint Width { set; get; }
 
         public uint Height { set; get; }
@@ -63,7 +69,8 @@ namespace Lesson12Structs
 
     //Overloading struct Constructors
     public struct RectangleV1
-    {
+    {     
+
         /// <summary>
         /// 
         /// </summary>
@@ -81,6 +88,9 @@ namespace Lesson12Structs
         /// <param name="height"></param>
         public RectangleV1(int width, int height)
         { Width = width; Height = height; }
+
+        public int Area()
+        { return Width * Height; }
     }
 
     /// <summary>

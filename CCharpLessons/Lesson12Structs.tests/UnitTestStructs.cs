@@ -1,4 +1,5 @@
 ﻿using Lesson12Structs;
+using System.Runtime.CompilerServices;
 
 namespace Lesson12Structs.tests
 {
@@ -25,6 +26,24 @@ namespace Lesson12Structs.tests
             Assert.Equal(2, line.Start.Y);
             Assert.Equal(3, line.End.X);
             Assert.Equal(4, line.End.Y);
-        }          
+        }
+
+        [Fact]
+        public void TestRectangle()
+        {
+            Lesson12Structs.Rectangle rect = new Lesson12Structs.Rectangle();
+            rect.Width = 10;
+            rect.Height = 20;
+            Assert.Equal(10u, rect.Width);
+            Assert.Equal(20u, rect.Height);
+        }
+
+        [Fact]
+        public void TestRectangleArea()
+        {
+           Lesson12Structs.RectangleV1 rect = new Lesson12Structs.RectangleV1(10,10);
+           Assert.Equal(100, rect.Area());
+
+        }
     }
 }
