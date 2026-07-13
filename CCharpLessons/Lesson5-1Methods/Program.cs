@@ -4,8 +4,18 @@ using System.Text;
 
 namespace Lesson5_1Methods
 {
-    class RefMethodCl
+    public class RefMethodCl
     {
+
+        internal static bool IsEven(int iNumb)
+        {
+            return iNumb % 2 == 0;
+        }
+
+        public static bool CanMultiply(int iNumb1, int iNumb2)
+        {
+            return iNumb1 != 0 && iNumb2 != 0;
+        }
 
         public void MethondNoRef(string str)
         {
