@@ -1,9 +1,12 @@
 ﻿public class DelegateDemo
 {
-    
+
+    #region Public delegates
     public delegate void MyVoidDelegate();
     public delegate int MyIntDelegate();
     public delegate int MyIntDelegateWithParams(int a, int b);
+    #endregion
+
 
     public static void Main(string[] args)
     {
