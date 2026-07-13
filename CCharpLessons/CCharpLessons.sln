@@ -101,6 +101,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson12Structs.tests", "Le
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson5-1Methods.tests", "Lesson5-1Methods.tests\Lesson5-1Methods.tests.csproj", "{649AC792-5C04-46A8-83CE-32CB85D17885}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson5-2Delegates", "Lesson5-2Delegates\Lesson5-2Delegates.csproj", "{84122A6B-D55C-4CD6-8B90-4391B4F15F34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -729,6 +731,22 @@ Global
 		{649AC792-5C04-46A8-83CE-32CB85D17885}.Release|Win32.Build.0 = Release|Any CPU
 		{649AC792-5C04-46A8-83CE-32CB85D17885}.Release|x86.ActiveCfg = Release|Any CPU
 		{649AC792-5C04-46A8-83CE-32CB85D17885}.Release|x86.Build.0 = Release|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Debug|Win32.Build.0 = Debug|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Debug|x86.Build.0 = Debug|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Release|Win32.ActiveCfg = Release|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Release|Win32.Build.0 = Release|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Release|x86.ActiveCfg = Release|Any CPU
+		{84122A6B-D55C-4CD6-8B90-4391B4F15F34}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
