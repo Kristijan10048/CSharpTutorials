@@ -35,7 +35,7 @@ namespace Lesson16UsingAttributes
     {
         public void NonClsCompliantMethod(uint nclsParam)
         {
-            Console.WriteLine("Called NonClsComplaintMethod");
+            Console.WriteLine("Called NonClsCompliantMethod");
         }
     }
     class Program

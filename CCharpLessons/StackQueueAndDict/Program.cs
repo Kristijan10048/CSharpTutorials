@@ -9,7 +9,7 @@ namespace StackQueueAndDict
     {
         #region Private Static Methods
         /// <summary>
-        /// Ilustrate queue 
+        /// Illustrate queue
         /// </summary>
         private static void QueueExample()
         {
@@ -46,7 +46,7 @@ namespace StackQueueAndDict
             myStack.Push(3);
             myStack.Push(4);
 
-            //prit stack content
+            //print stack content
             for (int i = 0; i < myStack.Count; i++)
                 Console.WriteLine(myStack.ElementAt<int>(i));
 
@@ -58,7 +58,7 @@ namespace StackQueueAndDict
         }
 
         /// <summary>
-        /// Ilustrate dictionary
+        /// Illustrate dictionary
         /// </summary>
         private static void DictionaryExample()
         {

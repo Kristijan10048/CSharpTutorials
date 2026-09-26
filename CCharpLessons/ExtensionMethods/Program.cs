@@ -11,7 +11,7 @@ namespace ExtensionMethods
     }
 
     /// <summary>
-    /// Application class that extents the generic interface
+    /// Application class that extends the generic interface
     /// </summary>
     public class CAppUtil : IMyObject
     {

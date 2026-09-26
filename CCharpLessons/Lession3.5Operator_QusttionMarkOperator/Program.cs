@@ -31,7 +31,7 @@ namespace Lession3._Operator_QusttionMarkOperator
             number = Int32.Parse(Console.ReadLine());
 
             Console.WriteLine("Your number is: {0}", p.ChekcNumber(number));
-            Console.WriteLine("Is positve:{0}", p.IsPositiveNumber(number));
+            Console.WriteLine("Is positive:{0}", p.IsPositiveNumber(number));
             Console.ReadKey();
         }
     }

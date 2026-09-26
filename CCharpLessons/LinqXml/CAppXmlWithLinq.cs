@@ -19,7 +19,7 @@ namespace LinqXml
     public class LinqNumbers
     {
         /// <summary>
-        /// Simple axampe of how to use linq
+        /// Simple example of how to use linq
         /// </summary>
         public void ParseNumbers()
         {

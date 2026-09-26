@@ -11,7 +11,7 @@ namespace Lesson7IntroductionToClasses
         // Constructor
         public OutputClass(string inputString) 
         {
-            Console.WriteLine("OutputClass:Constuctor");
+            Console.WriteLine("OutputClass:Constructor");
             myString = inputString;
         }
 

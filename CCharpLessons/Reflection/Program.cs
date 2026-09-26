@@ -7,7 +7,7 @@ using System.Reflection;
 namespace Reflection
 {
     /// <summary>
-    /// Abstract class applicatuon layer
+    /// Abstract class application layer
     /// </summary>
     abstract class ApT1
     {
@@ -40,7 +40,7 @@ namespace Reflection
         /// </summary>
         override public void ToDo()
         {
-            Console.WriteLine("Somthing to do");
+            Console.WriteLine("Something to do");
         }
         #endregion
     }
@@ -69,7 +69,7 @@ namespace Reflection
         /// </summary>
         private static void PintAssemblyName()
         {
-            //get curret assembly
+            //get current assembly
             var assembly = Assembly.GetExecutingAssembly();
             Console.WriteLine("Assembly name is: {0}", assembly.FullName);
         }
@@ -134,7 +134,7 @@ namespace Reflection
             Program.PrintAssemblyTypes();
             Program.CallMethodsViaReflection();
 
-            //Don't kill comand promt
+            //Don't kill command prompt
             Console.ReadKey();
         }
     }
