@@ -14,7 +14,11 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// Setting ComVisible to false makes the types in this assembly not visible 
+// Expose internal members (e.g. Program) to the test assembly so unit tests can exercise them
+// without changing their visibility in the tutorial code itself.
+[assembly: InternalsVisibleTo("ArrayRemoveInsert.tests")]
+
+// Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
