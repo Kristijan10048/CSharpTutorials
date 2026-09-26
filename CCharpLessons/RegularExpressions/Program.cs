@@ -364,7 +364,7 @@ namespace RegularExpressions
             //rotation frame block
             Regex C_REGEX_FRAME_ROT_BLOCK = new Regex(@"\s*W\s*\:\s*([+-]?\d*(\.\d+))\s*P\s*\:\s*([+-]?\d*(\.\d+))\s*R\s*\:\s*([+-]?\d*(\.\d+))\s*"); //([+-]?[\d+]?(\.\d+))\s*
 
-            // group paramter line
+            // group parameter line
             Match m = C_REGEX_TRACK_FRAME_GROUP_BLOCK.Match(text);
             if (m != null && m.Success)
             {
@@ -444,7 +444,7 @@ namespace RegularExpressions
 
             Regex C_REGEX_BOUND_ELEMENT_BLOCK = new Regex(@"\s*\[\d+\]\s*\=\s*(.)\s*");
 
-            // group paramter line
+            // group parameter line
             Match m = C_REGEX_BOUND_BLOCK.Match(text);
             if (m != null && m.Success)
             {
@@ -461,7 +461,7 @@ namespace RegularExpressions
             else
                 Console.WriteLine("No Match");
 
-            // group paramter line
+            // group parameter line
             m = C_REGEX_BOUND_ELEMENT_BLOCK.Match(text);
 
             //C_REGEX_BOUND_ELEMENT_BLOCK.Matches

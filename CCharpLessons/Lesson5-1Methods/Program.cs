@@ -20,7 +20,7 @@ namespace Lesson5_1Methods
         public void MethondNoRef(string str)
         {
             Console.WriteLine($"Input string {str}");
-            //Note value can be assignned to the parameter but its not mandatory
+            //Note value can be assigned to the parameter but its not mandatory
             str = " test";
             Console.WriteLine($"Input string after assignment {str}");
         }
@@ -32,7 +32,7 @@ namespace Lesson5_1Methods
         /// <param name="str"></param>
         static public void RefMethod(ref string str)
         {
-            //Note value can be assignned to the ref paramter but its not mandatory
+            //Note value can be assigned to the ref parameter but its not mandatory
             str = " test";
         }
 

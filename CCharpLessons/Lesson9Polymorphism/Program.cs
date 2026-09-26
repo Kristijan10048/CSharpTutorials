@@ -8,7 +8,7 @@ namespace Lesson9Polymorphism
     {
         public virtual void draw()
         {
-            Console.WriteLine("I am just a generecic drawing object.");
+            Console.WriteLine("I am just a generic drawing object.");
         }
 
     }

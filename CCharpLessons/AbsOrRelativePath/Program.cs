@@ -7,7 +7,7 @@ namespace AbsOrRelativePath
     {
         /// <summary>
         /// Checks if a path is absolute or not. 
-        /// (Only Works if Path is available in local fie system)
+        /// (Only Works if Path is available in local file system)
         /// </summary>
         /// <param name="path">A path to check</param>
         /// <returns></returns>
