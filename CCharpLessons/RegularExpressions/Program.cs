@@ -6,21 +6,21 @@ namespace RegularExpressions
 
     //$100.00 reg: \$\d+\.\d+
     //d* number
-    //w+ word 
+    //w+ word
     //? 0 or 1
     //[] - range
     //S* zero or more spaces
     class Program
     {
         /// <summary>
-        /// 
+        /// Matches every whole word in the text using \w+ and prints each match.
         /// </summary>
         public static void MatchWordsOnly()
         {
             string txt = "ova e eden test. Uste edna recenica";
 
             //any word = \w+
-            string pattern = "\\w+";                    
+            string pattern = "\\w+";
 
             Regex reg1 = new Regex(pattern);
             MatchCollection mColl = reg1.Matches(txt);
@@ -31,7 +31,7 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Matches every run of digits in the text using \d+ and prints each match.
         /// </summary>
         public static void MatchDigitsOnly()
         {
@@ -49,7 +49,7 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Extracts the TeachDist(...) expressions and their captured values, then finds the RelDist(...) commands.
         /// </summary>
         public static void MatchTeachDistExp()
         {
@@ -63,7 +63,7 @@ namespace RegularExpressions
             MatchCollection mc = reg1.Matches(txt);
 
             foreach (Match m in mc)
-            {                
+            {
                 Console.WriteLine("Dist command:{0}", m.ToString());
                 //Console.WriteLine("")
                 foreach(Group g in m.Groups)
@@ -77,7 +77,7 @@ namespace RegularExpressions
             {
                 Console.WriteLine("Rel command:{0}", m.ToString());
             }
-                
+
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Removes whitespace around commas, then parses the first two comma-separated names and rewrites them.
         /// </summary>
         public static void ParseComma()
         {
@@ -133,7 +133,7 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Matches the "NextMotionStep" signal token and prints each match.
         /// </summary>
         public static void MatchSignalNextMotionStep()
         {
@@ -148,7 +148,7 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Checks whether an "InMotion" signal is present and returns true if a match is found.
         /// </summary>
         /// <returns></returns>
         public static bool MatchInMotionSignal()
@@ -168,7 +168,7 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Checks whether a "SlaveMotionsCompleted" signal is present and returns true if a match is found.
         /// </summary>
         /// <returns></returns>
         public static bool MatchSlaveMotionsCompleatedSignal()
@@ -189,7 +189,7 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Matches the ~Begin~...~End~ body content between the tags in an XML-like string.
         /// </summary>
         public static void MatchXmlBodyTag()
         {
@@ -199,7 +199,7 @@ namespace RegularExpressions
             string stop = @"\~";
             string tag = "Body";
 
-            //Tag format       
+            //Tag format
             //string tmpFMT = "@{0}{1}{2}";
             string C_STR_TAG_REGEX_FMT = string.Concat(start, @"{0}\b.*", stop);
 
@@ -214,7 +214,7 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Matches a for-loop step command such as "for i = 90 to -90 step -10".
         /// </summary>
         public static  void MatchForLoop()
         {
@@ -232,9 +232,9 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Matches an ioSet(...) signal-value call such as "aioSet(test, 12)".
         /// </summary>
-        public static  void MatchIoSet()
+        public static void MatchIoSet()
         {
             Regex C_REGEX_IOSET_SIGNAL_VALUE_CALL = new Regex(@"^(a|s|g)ioSet\s*\(\s*(\w+)\s*\,\s*(\w+)\s*\)\s*", RegexOptions.IgnoreCase);
             string text = "aioSet(test, 12)";
@@ -249,7 +249,7 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Parses the paint schedule teach distance field and its captured value.
         /// </summary>
         public static void MatchPaintTeachDist()
         {
@@ -275,9 +275,9 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Matches the track frame start block field and prints its captured schedule.
         /// </summary>
-        public static void MatcPaintTrackFrame()
+        public static  void MatcPaintTrackFrame()
         {
 
             string text = @"Field: $LNSCH[1].$TRK_FRAME Access: RW: POSITION = ";
@@ -301,26 +301,26 @@ namespace RegularExpressions
                 Console.WriteLine("No Match");
         }
 
-        //void MatchPaintTrackFrame()
-        //{
-        //    string text = @"Field: $LNSCH[1].$TRK_FRAME Access: RW: POSITION = ";
-        //    Regex C_REGEX_TRACK_FRAME_START_BLOCK = new Regex(@"^Field\s*\:\s*\$LNSCH\[(\d+)\]\.\$TRK_FRAME\s*Access\s*\:\s*RW\s*\:\s*POSITION\s*=\s*");//\=\s*\b
-        //    Match m = C_REGEX_TRACK_FRAME_START_BLOCK.Match(text);
-        //    if (m != null && m.Success)
-        //    {
-        //        int pntSch = -12;
-        //        int value = -12;
-        //        Int32.TryParse(m.Groups[1].Value, out pntSch);
-        //        Int32.TryParse(m.Groups[2].Value.ToString(), out value);
-        //        Console.WriteLine("Paint schedule: {0}", pntSch);
-        //        Console.WriteLine("Match:{0}", m.ToString());
-        //    }
-        //    else
-        //        Console.WriteLine("No Match");
-        //}
+        public static void MatchPaintTrackFrame()
+        {
+            string text = @"Field: $LNSCH[1].$TRK_FRAME Access: RW: POSITION = ";
+            Regex C_REGEX_TRACK_FRAME_START_BLOCK = new Regex(@"^Field\s*\:\s*\$LNSCH\[(\d+)\]\.\$TRK_FRAME\s*Access\s*\:\s*RW\s*\:\s*POSITION\s*=\s*");//\=\s*\b
+            Match m = C_REGEX_TRACK_FRAME_START_BLOCK.Match(text);
+            if (m != null && m.Success)
+            {
+                int pntSch = -12;
+                int value = -12;
+                Int32.TryParse(m.Groups[1].Value, out pntSch);
+                Int32.TryParse(m.Groups[2].Value.ToString(), out value);
+                Console.WriteLine("Paint schedule: {0}", pntSch);
+                Console.WriteLine("Match:{0}", m.ToString());
+            }
+            else
+                Console.WriteLine("No Match");
+        }
 
         /// <summary>
-        /// 
+        /// Matches the user track frame field and prints its captured schedule.
         /// </summary>
         public static void MatchPaintTrackUserFrame()
         {
@@ -332,10 +332,8 @@ namespace RegularExpressions
             Match m = C_REGEX_TRACK_FRAME_START_BLOCK.Match(text);
             if (m != null && m.Success)
             {
-                int pntSch = -12;               
-
-                Int32.TryParse(m.Groups[1].Value, out pntSch);              
-
+                int pntSch = -12;
+                Int32.TryParse(m.Groups[1].Value, out pntSch);
                 Console.WriteLine("Paint schedule: {0}", pntSch);
                 Console.WriteLine("Match:{0}", m.ToString());
             }
@@ -344,7 +342,7 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Parses the group, translation, and rotation data from a paint frame record.
         /// </summary>
         public static void MatchPaintFrameData()
         {
@@ -356,7 +354,7 @@ namespace RegularExpressions
             string test1 = "W:      111.506   P:      .383   R:   -.929";
 
             //group line mathc
-            Regex C_REGEX_TRACK_FRAME_GROUP_BLOCK = new Regex(@"^Group\s*\:\s*(\d+)\s*Config\:\s*(\w)\s*(\w)\s*(\w)\s*\,\s*(\d+)\s*\,\s*(\d+)\s*\,\s*(\d)\s*");
+            Regex C_REGEX_TRACK_FRAME_GROUP_BLOCK = new Regex(@"^Group\s*\:\s*(\d+)\s*Config\:\s*(\w)\s*(\w)\s*(\w)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d)\s*");
 
             //translation line match
             Regex C_REGEX_FRAME_TRANSL_BLOCK = new Regex(@"\s*X\s*\:\s*([+-]?\d+(\.\d+)?)\s*Y\s*\:\s*([+-]?\d+(\.\d+)?)\s*Z\s*\:\s*([+-]?\d+(\.\d+)?)\s*");
@@ -413,7 +411,7 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Matches the bound array blocks and prints each element's index and value.
         /// </summary>
         public static void MatchPaintBounds()
         {
@@ -453,7 +451,7 @@ namespace RegularExpressions
                 Int32.TryParse(m.Groups[1].Value, out pntSch);
                 Console.WriteLine("Schedule:{0}", pntSch);
                 Console.WriteLine("Bound 1 or 2 : {0}", m.Groups[2].Value);
-                Console.WriteLine("Length : {0}", m.Groups[3].Value);                
+                Console.WriteLine("Length : {0}", m.Groups[3].Value);
 
                 Console.WriteLine("Paint schedule: {0}", pntSch);
                 Console.WriteLine("Match:{0}", m.ToString());
@@ -482,7 +480,7 @@ namespace RegularExpressions
         }
 
         /// <summary>
-        /// 
+        /// Matches the user track frame flag field and prints its captured schedule.
         /// </summary>
         public static void MatchTrackUserFrameFlag()
         {
