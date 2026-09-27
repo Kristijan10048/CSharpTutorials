@@ -66,5 +66,13 @@ namespace ArrayRemoveInsert.tests
 
             Assert.Equal(new[] { 'a', 'b', 'd', 'e' }, array);
         }
+
+        [Fact]
+        public void RemoveAt_negative_index_throws_IndexOutOfRangeException()
+        {
+            char[] array = { 't', 'e', 's', 't' };
+
+            Assert.Throws<IndexOutOfRangeException>(() => Program.RemoveAt(-1, ref array));
+        }
     }
 }
