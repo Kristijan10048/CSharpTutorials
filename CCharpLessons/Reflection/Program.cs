@@ -7,7 +7,10 @@ using System.Reflection;
 namespace Reflection
 {
     /// <summary>
-    /// Abstract class application layer
+    /// A small reflection tutorial that demonstrates inspecting and invoking types, methods, and properties at runtime with System.Reflection.
+    /// </summary>
+    /// <summary>
+    /// Abstract base type used to show inheritance and method overriding — the members here are what reflection enumerates and invokes.
     /// </summary>
     abstract class ApT1
     {
@@ -20,6 +23,9 @@ namespace Reflection
     class Test1 : ApT1
     {
         #region Public Members
+        /// <summary>
+        /// Private backing field for the Number property.
+        /// </summary>
         public int m_number;
         #endregion
 
@@ -36,7 +42,7 @@ namespace Reflection
 
         #region Override Methods
         /// <summary>
-        /// 
+        /// Overrides ApT1.ToDo and prints a message at runtime; invoked via reflection in CallMethodsViaReflection.
         /// </summary>
         override public void ToDo()
         {
@@ -46,13 +52,13 @@ namespace Reflection
     }
 
     /// <summary>
-    /// Test2 Class
+    /// A plain (non-inheriting) class with a simple auto-property, used to show that reflection works on any type.
     /// </summary>
     class Test2
     {
         #region Public Properties
         /// <summary>
-        /// 
+        /// Simple auto-property demonstrating property enumeration via reflection.
         /// </summary>
         public string Name { get; set; }
         #endregion
@@ -75,7 +81,7 @@ namespace Reflection
         }
 
         /// <summary>
-        /// Prints assembly types
+        /// Enumerates every type in the current assembly with GetTypes(). For each type, prints its name and base type, whether it is abstract, plus the names of all its methods and properties.
         /// </summary>
         private static void PrintAssemblyTypes()
         {
@@ -98,7 +104,7 @@ namespace Reflection
         }
 
         /// <summary>
-        /// 
+        /// Invokes a method at runtime through reflection. Resolves the ApT1 type from its string representation, lists its methods with return types, then instantiates Test1 and calls ToDo() via Invoke with no arguments.
         /// </summary>
         private static void CallMethodsViaReflection()
         {
@@ -125,9 +131,9 @@ namespace Reflection
         #endregion
 
         /// <summary>
-        /// 
+        /// Program entry point that runs the three reflection demos in order: print the assembly name, list all its types, then invoke a method via reflection.
         /// </summary>
-        /// <param name="args"></param>
+        /// <param name="args">Command-line arguments; intentionally unused by this demo.</param>
         static void Main(string[] args)
         {
             Program.PintAssemblyName();
