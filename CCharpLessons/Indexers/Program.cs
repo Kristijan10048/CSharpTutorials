@@ -8,16 +8,16 @@ namespace Indexers
     class Data
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Gets or sets the value. </summary>
+        /// <summary>   Gets or sets the underlying double value. </summary>
         ///
-        /// <value> The value. </value>
+        /// <value> The underlying double value. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         double Value { get; set; }
 
         private string m_text = "Gets or sets the value";
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Indexer to get items within this collection using array index syntax. </summary>
+        /// <summary>   Gets the character at the specified zero-based index of the stored text. </summary>
         ///
         /// <param name="index">    Zero-based index of the entry to access. </param>
         ///
@@ -30,7 +30,7 @@ namespace Indexers
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Gets the length. </summary>
+        /// <summary>   Gets the number of characters in the stored text. </summary>
         ///
         /// <value> The length. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
