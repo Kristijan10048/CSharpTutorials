@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ClassInheritance
+namespace Lesson32ClassInheritance
 {
     /// <summary>
     /// Base class

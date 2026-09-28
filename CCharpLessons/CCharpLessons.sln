@@ -45,37 +45,36 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson21StaticClass", "Less
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayRemoveInsert", "ArrayRemoveInsert\ArrayRemoveInsert.csproj", "{F7FDE972-6FC2-4982-907D-76A53A62171C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumGreatherTest", "EnumGreatherTest\EnumGreatherTest.csproj", "{BCEC6ED7-CE17-4242-82E1-6145CC28B1F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson36EnumComparison", "Lesson36EnumComparison\Lesson36EnumComparison.csproj", "{BCEC6ED7-CE17-4242-82E1-6145CC28B1F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressions", "RegularExpressions\RegularExpressions.csproj", "{323D2F30-6DCB-4C07-A576-8069EE2FD009}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson26RegularExpressions", "Lesson26RegularExpressions\Lesson26RegularExpressions.csproj", "{323D2F30-6DCB-4C07-A576-8069EE2FD009}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassInheritance", "ClassInheritance\ClassInheritance.csproj", "{20B7087E-EDEE-45E9-A9E7-496EF6732F29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lession3.5Operator_QusttionMarkOperator", "Lession3.5Operator_QusttionMarkOperator\Lession3.5Operator_QusttionMarkOperator.csproj", "{8E72E953-29FF-419C-968C-F39B583B103E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson3.5Operator?QuestionMarkOperator", "Lesson3.5Operator?QuestionMarkOperator\Lesson3.5Operator?QuestionMarkOperator.csproj", "{8E72E953-29FF-419C-968C-F39B583B103E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson19HybridDictionary", "Lesson19HybridDictionary\Lesson19HybridDictionary.csproj", "{C7774AAB-1882-43EC-9D9E-5B90DDB9747A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbsOrRelativePath", "AbsOrRelativePath\AbsOrRelativePath.csproj", "{7AB718F4-EEBC-4091-97F8-28D861582D2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson30AbsOrRelativePath", "Lesson30AbsOrRelativePath\Lesson30AbsOrRelativePath.csproj", "{7AB718F4-EEBC-4091-97F8-28D861582D2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLReadWrite", "XMLReadWrite\XMLReadWrite.csproj", "{DD8C7021-40AC-461E-A4D5-6862E45BEF58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson27XMLReadWrite", "Lesson27XMLReadWrite\Lesson27XMLReadWrite.csproj", "{DD8C7021-40AC-461E-A4D5-6862E45BEF58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqXml", "LinqXml\LinqXml.csproj", "{6FBBA90E-4C6D-4EE1-AF18-878EAE100BE7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson28LinqXml", "Lesson28LinqXml\Lesson28LinqXml.csproj", "{6FBBA90E-4C6D-4EE1-AF18-878EAE100BE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexers", "Indexers\Indexers.csproj", "{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidingInheritedMembers", "HidingInheritedMembers\HidingInheritedMembers.csproj", "{AE99CBF2-FB6E-40D0-8AE7-F1E94F229D56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson35HidingInheritedMembers", "Lesson35HidingInheritedMembers\Lesson35HidingInheritedMembers.csproj", "{AE99CBF2-FB6E-40D0-8AE7-F1E94F229D56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstructorsAndInheritance", "ConstructorsAndInheritance\ConstructorsAndInheritance.csproj", "{7989670E-D476-4B6E-B5C4-2DF92187DC2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson34ConstructorsAndInheritance", "Lesson34ConstructorsAndInheritance\Lesson34ConstructorsAndInheritance.csproj", "{7989670E-D476-4B6E-B5C4-2DF92187DC2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "ExtensionMethods\ExtensionMethods.csproj", "{6ED0665C-EE0C-4FCA-9AED-17C5DCDC7DC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson24ExtensionMethods", "Lesson24ExtensionMethods\Lesson24ExtensionMethods.csproj", "{6ED0665C-EE0C-4FCA-9AED-17C5DCDC7DC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attributes", "Attributes\Attributes.csproj", "{65B28BBE-094B-4419-A312-85CF73FE67BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson31Attributes", "Lesson31Attributes\Lesson31Attributes.csproj", "{65B28BBE-094B-4419-A312-85CF73FE67BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection", "Reflection\Reflection.csproj", "{A4D95997-F464-434C-A335-5C7F6C099B5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson25Reflection", "Lesson25Reflection\Lesson25Reflection.csproj", "{A4D95997-F464-434C-A335-5C7F6C099B5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackQueueAndDict", "StackQueueAndDict\StackQueueAndDict.csproj", "{F1B597DD-4753-4A82-BD64-24844C60A5C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson29StackQueueAndDict", "Lesson29StackQueueAndDict\Lesson29StackQueueAndDict.csproj", "{F1B597DD-4753-4A82-BD64-24844C60A5C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NamedParameters", "NamedParameters\NamedParameters.csproj", "{509AFFBC-54F2-4CB5-819A-47FDF5895A92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson22NamedParameters", "Lesson22NamedParameters\Lesson22NamedParameters.csproj", "{509AFFBC-54F2-4CB5-819A-47FDF5895A92}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{1CBFA1F6-8C54-465E-B08F-3A1989E0C300}"
 EndProject
@@ -87,7 +86,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyDemosRegExParsingRobots",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressionsNCCodeDemos", "CSharpTutorialsWithRobotParsing\RegularExpressionsNCCodeDemos\RegularExpressionsNCCodeDemos.csproj", "{8E3FDEFD-E7FB-4D8B-86E8-2F80A1F61EB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParamsKeyword", "ParamsKeyword\ParamsKeyword.csproj", "{6E7E296A-FE65-487B-8360-D3B0B99FEF72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson23ParamsKeyword", "Lesson23ParamsKeyword\Lesson23ParamsKeyword.csproj", "{6E7E296A-FE65-487B-8360-D3B0B99FEF72}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRESTApi", "SimpleRESTApi\SimpleRESTApi.csproj", "{C49B299E-FF93-612D-E65E-2A85D4212DA3}"
 EndProject
@@ -463,18 +462,6 @@ Global
 		{6FBBA90E-4C6D-4EE1-AF18-878EAE100BE7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{6FBBA90E-4C6D-4EE1-AF18-878EAE100BE7}.Release|Win32.ActiveCfg = Release|Any CPU
 		{6FBBA90E-4C6D-4EE1-AF18-878EAE100BE7}.Release|x86.ActiveCfg = Release|Any CPU
-		{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}.Debug|Win32.ActiveCfg = Debug|x86
-		{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}.Debug|x86.ActiveCfg = Debug|x86
-		{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}.Debug|x86.Build.0 = Debug|x86
-		{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}.Release|Any CPU.ActiveCfg = Release|x86
-		{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}.Release|Mixed Platforms.Build.0 = Release|x86
-		{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}.Release|Win32.ActiveCfg = Release|x86
-		{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}.Release|x86.ActiveCfg = Release|x86
-		{9A3624DF-EEC6-4453-8F1E-F340D5440ACB}.Release|x86.Build.0 = Release|x86
 		{AE99CBF2-FB6E-40D0-8AE7-F1E94F229D56}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{AE99CBF2-FB6E-40D0-8AE7-F1E94F229D56}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{AE99CBF2-FB6E-40D0-8AE7-F1E94F229D56}.Debug|Mixed Platforms.Build.0 = Debug|x86

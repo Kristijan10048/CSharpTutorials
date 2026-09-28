@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{20B7087E-EDEE-45E9-A9E7-496EF6732F29}</ProjectGuid>
+    <ProjectGuid>{8E72E953-29FF-419C-968C-F39B583B103E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lesson32ClassInheritance</RootNamespace>
-    <AssemblyName>Lesson32ClassInheritance</AssemblyName>
+    <RootNamespace>Lesson3.5Operator?QuestionMarkOperator</RootNamespace>
+    <AssemblyName>Lesson3.5Operator?QuestionMarkOperator</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
