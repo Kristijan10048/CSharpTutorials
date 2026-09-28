@@ -49,7 +49,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson36EnumComparison", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson26RegularExpressions", "Lesson26RegularExpressions\Lesson26RegularExpressions.csproj", "{323D2F30-6DCB-4C07-A576-8069EE2FD009}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassInheritance", "ClassInheritance\ClassInheritance.csproj", "{20B7087E-EDEE-45E9-A9E7-496EF6732F29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson32ClassInheritance", "Lesson32ClassInheritance\Lesson32ClassInheritance.csproj", "{20B7087E-EDEE-45E9-A9E7-496EF6732F29}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson3.5Operator?QuestionMarkOperator", "Lesson3.5Operator?QuestionMarkOperator\Lesson3.5Operator?QuestionMarkOperator.csproj", "{8E72E953-29FF-419C-968C-F39B583B103E}"
 EndProject
