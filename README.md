@@ -6,49 +6,56 @@ A collection of small, self-contained **C# tutorial projects** plus a lightweigh
 
 ## Repository layout
 
-```
-CSharpTutorials/
-├── README.md                       ← this file
-└── CCharpLessons/
-    ├── SimpleRESTApi/              ← .NET 10 Web API demo (see its own README)
-    │   └── SimpleRESTApi.Tests/    ← xUnit tests for the API
-    ├── Lesson1GettingStarted/      ← first steps, running a console app
-    ├── Lesson2OperatorsTypesAndVariables/
-    ├── Lesson3ControlStatementsSelection/
-    ├── Lesson4ControlStatementsLoops/
-    ├── Lesson5-1Methods/           ← methods (+ unit tests)
-    ├── Lesson5-2Delegates/         ← delegates (void, value-returning, parameterized)
-    ├── Lesson6Namespaces/
-    ├── Lesson7IntroductionToClasses/
-    ├── Lesson8ClassInheritance/
-    ├── Lesson9Polymorphism/
-    ├── Lesson10Properties/         ← properties (+ unit tests)
-    ├── Lesson11Indexers/
-    ├── Lesson12Structs/            ← structs (+ unit tests)
-    ├── Lesson13Interfaces/
-    ├── Lesson15IntroductionToExceptionHandling/  ← try/catch/finally (+ unit tests)
-    ├── Lesson16UsingAttributes/
-    ├── Lesson17Enums/
-    ├── Lesson19HybridDictionary/   ← a dictionary-like class (+ unit tests)
-    ├── Lesson20PartialClasses/
-    └── ... and several focused demos:
-        ├── AbsOrRelativePath/      ← absolute vs. relative paths
-        ├── ArrayRemoveInsert/      ← removing and inserting array elements
-        ├── Attributes/             ← attribute definitions
-        ├── ClassInheritanceDemo/   ← inheritance walkthrough
-        ├── ConstructorsAndInheritance/
-        ├── EnumGreatherTest/       ← comparing enum values
-        ├── ExtensionMethods/
-        ├── HidingInheritedMembers/
-        ├── Indexers/
-        ├── LinqXml/                ← LINQ to XML
-        ├── NamedParameters/        ← named arguments
-        ├── ParamsKeyword/          ← the `params` keyword
-        ├── Reflection/             ← reflection over assemblies/types
-        ├── RegularExpressions/     ← regex matching/replacement
-        ├── StackQueueAndDict/      ← stack, queue and dictionary
-        └── XMLReadWrite/           ← reading and writing XML files
-```
+All lessons live under `CCharpLessons/` (the original author's spelling). They are numbered roughly in learning order; the `SimpleRESTApi` folder is a separate web-service demo with its own README.
+
+### Core lessons
+
+| # | Lesson | Notes |
+|---|--------|-------|
+| 1 | Getting started | first steps, running a console app |
+| 2 | Operators, types and variables | |
+| 3 | Control flow: selection | |
+| 3.5 | Question mark (`?`) operator | |
+| 4 | Control flow: loops | |
+| 5-1 | Methods | (+ unit tests) |
+| 5-2 | Delegates | void, value-returning, parameterized |
+| 6 | Namespaces | |
+| 7 | Introduction to classes | |
+| 8 | Class inheritance | |
+| 9 | Polymorphism | |
+| 10 | Properties | (+ unit tests) |
+| 11 | Indexers | |
+| 12 | Structs | (+ unit tests) |
+| 13 | Interfaces | |
+| 15 | Exception handling | try/catch/finally (+ unit tests) |
+| 16 | Attributes | |
+| 17 | Enums | |
+| 18 | Virtual functions | *(folder `Lession18VirtualFunctions`)* |
+| 19 | HybridDictionary | a dictionary-like class (+ unit tests) |
+| 20 | Partial classes | |
+| 21 | Static classes | *(folder `Lession21StaticClass`)* |
+| 22 | Named parameters | |
+| 23 | The `params` keyword | |
+| 24 | Extension methods | |
+| 25 | Reflection | over assemblies/types |
+| 26 | Regular expressions | matching/replacement |
+| 27 | Reading and writing XML files | |
+| 28 | LINQ to XML | |
+| 29 | Stack, queue and dictionary | |
+| 30 | Absolute vs relative paths | |
+| 31 | Attribute definitions | |
+| 32 | Class inheritance | walkthrough |
+| 33 | Class inheritance demo | |
+| 34 | Constructors and inheritance | |
+| 35 | Hiding inherited members | |
+| 36 | Enum comparison | |
+| 37 | Removing and inserting array elements | |
+
+> A few folders don't fit the clean numbering — `HelloWorld/` and `Lesson5Methods/` are small standalone experiments, and `Lession18VirtualFunctions` / `Lession21StaticClass` carry a historical typo in their names.
+
+### Other projects
+
+- `SimpleRESTApi/` — .NET 10 Web API demo (see its own README at `CCharpLessons/SimpleRESTApi/README.md`)
 
 ## Prerequisites
 
@@ -72,9 +79,11 @@ For example:
 dotnet run --project CCharpLessons/Lesson5-2Delegates/Lesson5-2Delegates.csproj
 ```
 
+> Most folders share their name with the `.csproj` inside them, but a few don't — e.g. `Lesson10Properties/` contains `Lesson10-Properties.csproj`. Adjust the path accordingly when it differs.
+
 ## Running the tests
 
-Several lessons ship with xUnit test projects (folders named `*.Tests`). Run them individually:
+Several lessons ship with xUnit test projects (folders named `*.Tests`, though some use lowercase `.tests`). Run them individually:
 
 ```powershell
 dotnet test CCharpLessons/Lesson10-Properties.Tests/Lesson10-Properties.Tests.csproj
@@ -94,15 +103,16 @@ CCharpLessons/SimpleRESTApi/README.md
 
 The lessons walk through the core of C#, roughly in order:
 
-- Getting started, variables/types, operators
+- Getting started, variables/types, operators (including the `?` operator)
 - Control flow (selection and loops)
 - Methods, delegates, namespaces
-- Classes, constructors, inheritance, polymorphism, hiding members
-- Properties, indexers, structs, interfaces, partial classes
-- Enums, attributes, named arguments, the `params` keyword
-- Exception handling
+- Classes, constructors, inheritance, polymorphism, virtual functions, hiding members
+- Properties, indexers, structs, interfaces, partial classes, static classes
+- Enums, enum comparison, attributes, named arguments, the `params` keyword
+- Extension methods
+- Exception handling (try/catch/finally)
 - Reflection, LINQ to XML, regular expressions
-- Reading/writing XML files, stacks/queues/dictionaries
+- Reading/writing XML files, stacks/queues/dictionaries, array manipulation
 
 ## Notes
 
